@@ -5,12 +5,17 @@
 Add your content here.
 
 
-= Details =
+==Team of developers=
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+[https://code.google.com/p/rent-car-app/wiki/MartinZboril Martin Zbořil] = developer
+
+[https://code.google.com/p/rent-car-app/wiki/JakubStromsky Jakub Stromský] = developer
+
+[https://code.google.com/p/rent-car-app/wiki/JanNovak Jan Novák] = developer
+
+[https://code.google.com/p/rent-car-app/wiki/JanBouska Jan Bouška] = developer
+
+
 
 ==Supervisors==
 RNDr. Adam Rambousek
