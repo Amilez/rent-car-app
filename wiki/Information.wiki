@@ -14,5 +14,7 @@ Add your content here.  Format your content with:
 
 ==Supervisors==
 RNDr. Adam Rambousek
+
 Mgr. Luděk Bártek, Ph.D.
+
 doc. RNDr. Tomáš Pitner, Ph.D.
