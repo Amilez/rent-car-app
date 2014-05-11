@@ -19,4 +19,7 @@ Mgr. Luděk Bártek, Ph.D.
 
 doc. RNDr. Tomáš Pitner, Ph.D.
 
+
 <g:plusone size="medium"></g:plusone>
+
+<wiki:gadget url="www.deptmit.webs.com%2FGoogleTranslateGadget2.xml" height="200" border="0" /> 
