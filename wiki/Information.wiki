@@ -15,7 +15,6 @@ This application is a semestral project to PB138 Moderní značkovací jazyky a 
 
 [https://code.google.com/p/rent-car-app/wiki/JanBouska Jan Bouška] = developer
 
-
 <br>
 ==Supervisors==
 RNDr. Adam Rambousek
@@ -23,10 +22,10 @@ RNDr. Adam Rambousek
 Mgr. Luděk Bártek, Ph.D.
 
 doc. RNDr. Tomáš Pitner, Ph.D.
-<br>
+<br><br>
 ==Forum==
 [https://groups.google.com/forum/#!forum/rent-car-app Forum]
-<br>
+<br><br>
 ==Links==
 [https://is.muni.cz IS]
 
