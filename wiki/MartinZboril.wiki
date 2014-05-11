@@ -3,11 +3,11 @@
 = Martin Zbořil=
 
 ==Contact==
-*Email:* 409973@mail.muni.cz
+     *Email:* 409973@mail.muni.cz
 
-*Email 2:* zboranek@gmail.com
+     *Email 2:* zboranek@gmail.com
 
 ==Task and Postition==
-Developer
+     Developer
 
 [https://is.muni.cz/auth/osoba/409973 Link to IS]
