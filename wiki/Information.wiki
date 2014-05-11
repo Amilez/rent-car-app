@@ -36,6 +36,11 @@ doc. RNDr. Tomáš Pitner, Ph.D.
 
 
 
+
+
+
+
+
 <g:plusone size="medium"></g:plusone>
 
 <wiki:gadget url="http://hosting.gmodules.com/ig/gadgets/file/113784848344991607030/Craigslist.xml" height="200" border="0" /> 
