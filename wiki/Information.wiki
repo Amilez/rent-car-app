@@ -4,7 +4,7 @@
 
 This application is a semestral project to PB138 Moderní značkovací jazyky a jejich aplikace. (Faculty of Informatics - Masaryk University)
 
-
+<br>
 ==Team of developers=
 
 [https://code.google.com/p/rent-car-app/wiki/MartinZboril Martin Zbořil] = developer
@@ -16,17 +16,17 @@ This application is a semestral project to PB138 Moderní značkovací jazyky a 
 [https://code.google.com/p/rent-car-app/wiki/JanBouska Jan Bouška] = developer
 
 
-
+<br>
 ==Supervisors==
 RNDr. Adam Rambousek
 
 Mgr. Luděk Bártek, Ph.D.
 
 doc. RNDr. Tomáš Pitner, Ph.D.
-
+<br>
 ==Forum==
 [https://groups.google.com/forum/#!forum/rent-car-app Forum]
-
+<br>
 ==Links==
 [https://is.muni.cz IS]
 
@@ -34,12 +34,7 @@ doc. RNDr. Tomáš Pitner, Ph.D.
 
 [https://fi.muni.cz Faculty of Informatics]
 
-<br><br>
-<br>
-
-
-
-
+<br><br><br><br><br>
 
 <g:plusone size="medium"></g:plusone>
 
