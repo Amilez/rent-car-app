@@ -9,5 +9,4 @@
 ==Task and Position==
 Developer
 
-https://code.google.com/p/rent-car-app/source/browse/wiki/Photos/stromsky.jpg
 [https://is.muni.cz/auth/osoba/409846 Link to IS]
