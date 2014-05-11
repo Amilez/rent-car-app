@@ -20,11 +20,3 @@ Mgr. Luděk Bártek, Ph.D.
 doc. RNDr. Tomáš Pitner, Ph.D.
 
 <script src="//www.gmodules.com/ig/ifr?url=http://www.deptmit.webs.com/GoogleTranslateGadget2.xml&amp;synd=open&amp;w=320&amp;h=200&amp;title=Translation&amp;border=%23ffffff%7C0px%2C1px+solid+%23998899%7C0px%2C1px+solid+%23aa99aa%7C0px%2C2px+solid+%23bbaabb%7C0px%2C2px+solid+%23ccbbcc&amp;output=js"></script>
-
-<script type="text/javascript">
-  (function() {
-    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-    po.src = 'https://apis.google.com/js/plusone.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-  })();
-</script>
