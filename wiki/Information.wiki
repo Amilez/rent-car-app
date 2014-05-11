@@ -2,7 +2,7 @@
 
 =Information=
 
-Add your content here.
+This application is a semestral project to PB138 Moderní značkovací jazyky a jejich aplikace. [Faculty of Informatics - Masaryk University]
 
 
 ==Team of developers=
