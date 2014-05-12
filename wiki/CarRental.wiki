@@ -1,6 +1,6 @@
 #summary Java application
 
-= Car Renta - Java application =
+= Car Rental - Java application =
 
 This java application include:<br>
 *entities*: Car, Customer, Lease<br>
@@ -120,3 +120,47 @@ Finding the customer by the name.</li>
 
 ==Lease Manager==
 methods: _createLease, updateLease, unLeasedCars, findLeaseByCustomer, lastMonthProfit_
+<ul>
+<li>
+====Create Lease====
+attributes: _Lease_
+
+return value: _void_
+
+Adding the lease into the manager.
+</li>
+<li>
+====Update Lease====
+attributes: _Lease_
+
+return value: _void_
+
+Updating the lease in the manager.
+</li>
+<li>
+====UnLeased Cars====
+attributes: _void_
+
+return value: _List (Car)_
+
+Finding cars which are actually free.
+</li>
+<li>
+====Find Lease By Customer====
+attributes: _Customer_
+
+return value: _List (Lease)_
+
+Finding the lease by the customer.
+</li>
+
+<li>
+====Last Month Profit====
+attributes: _void_
+
+return value: _Big Decimal_
+
+Getting a profit from last month leases.
+</li>
+
+</ul>
