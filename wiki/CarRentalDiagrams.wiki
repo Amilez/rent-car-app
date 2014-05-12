@@ -2,6 +2,6 @@
 
 =Use Case Diagram:=
 https://rent-car-app.googlecode.com/svn/wiki/use.jpg
-
+<br><br>
 =Class Diagram:=
 https://rent-car-app.googlecode.com/svn/wiki/diagram.jpg
