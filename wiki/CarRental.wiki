@@ -31,26 +31,34 @@ Adding the car into the manager.
 <li>
 ====Update Car====
 attributes: _Car_
+
 return value: _void_
+
 Updating the car in the manager.
 </li>
 <li>
 ====Delete Car====
 attributes: _Car_
+
 return value: _void_
+
 Deleting the car from the manager.
 </li>
 <li>
 ====Find Car By Id====
 attributes: _Long_
+
 return value: _Car_
+
 Finding the car by the Id.
 </li>
 
 <li>
 ====Find All Cars====
 attributes: _void_
+
 return value: _List (Car)_
+
 Finding all cars.
 </li>
 
@@ -61,40 +69,52 @@ methods: _createCustomer, updateCustomer, deleteCustomer, findCustomerById, find
 <ul>
 <li>
 ====Create Customer====
-attributes: _Customer_<br>
-return value: _void_<br>
+attributes: _Customer_
+
+return value: _void_
+
 Adding the customer into the manager.</li>
 
 <li>
 ====Update Customer====
-attributes: _Customer_<br>
-return value: _void_<br>
+attributes: _Customer_
+
+return value: _void_
+
 Updating the customer in the manager.</li>
 
 <li>
 ====Delete Customer====
-attributes: _Customer_<br>
-return value: _void_<br>
+attributes: _Customer_
+
+return value: _void_
+
 Deleting the customer from the manager.</li>
 
 <li>
 ====Find Customer By Id====
-attributes: _Long_<br>
-return value: _Customer_<br>
+attributes: _Long_
+
+return value: _Customer_
+
 Finding the customer by the Id.</li>
 
 
 <li>
 ====Find All Customers====
-attributes: _void_<br>
-return value: _List (Customer)_<br>
+attributes: _void_
+
+return value: _List (Customer)_
+
 Finding all customers.</li>
 
 
 <li>
 ====Find Customer By Name====
-attributes: _Long_<br>
-return value: _Customer_<br>
+attributes: _Long_
+
+return value: _Customer_
+
 Finding the customer by the name.</li>
 </ul>
 
