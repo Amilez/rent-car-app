@@ -48,8 +48,10 @@ Finding the car by the Id.
 <li>
 ====Find All Cars====
 attributes: _void_<br>
-return value: _List (Car)_<br>
+return value: _List (Car)_<br/>
 Finding all cars.
+
+
 </ul>
 
 ==Customer Manager==
