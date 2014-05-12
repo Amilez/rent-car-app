@@ -22,33 +22,33 @@ methods: _createCar, updateCar, deleteCar, findCarById, findAllCars_
 <ul>
 <li>
 ====Create Car====
-attributes: _Car_
-return value: _void_
+attributes: _Car_<br>
+return value: _void_<br>
 Adding the car into the manager.</li>
 
 <li>
 ====Update Car====
-attributes: _Car_
-return value: _void_
+attributes: _Car_<br>
+return value: _void_<br>
 Updating the car in the manager.</li>
 
 <li>
 ====Delete Car====
-attributes: _Car_
-return value: _void_
+attributes: _Car_<br>
+return value: _void_<br>
 Deleting the car from the manager.</li>
 
 <li>
 ====Find Car By Id====
-attributes: _Long_
-return value: _Car_
+attributes: _Long_<br>
+return value: _Car_<br>
 Finding the car by the Id.</li>
 
 
 <li>
 ====Find All Cars====
-attributes: _void_
-return value: _List (Car)_
+attributes: _void_<br>
+return value: _List (Car)_<br>
 Finding all cars.</li>
 </ul>
 
@@ -57,41 +57,42 @@ methods: _createCustomer, updateCustomer, deleteCustomer, findCustomerById, find
 <ul>
 <li>
 ====Create Customer====
-attributes: _Customer_
-return value: _void_
+attributes: _Customer_<br>
+return value: _void_<br>
 Adding the customer into the manager.</li>
 
 <li>
 ====Update Customer====
-attributes: _Customer_
-return value: _void_
+attributes: _Customer_<br>
+return value: _void_<br>
 Updating the customer in the manager.</li>
 
 <li>
 ====Delete Customer====
-attributes: _Customer_
-return value: _void_
+attributes: _Customer_<br>
+return value: _void_<br>
 Deleting the customer from the manager.</li>
 
 <li>
 ====Find Customer By Id====
-attributes: _Long_
-return value: _Customer_
+attributes: _Long_<br>
+return value: _Customer_<br>
 Finding the customer by the Id.</li>
 
 
 <li>
 ====Find All Customers====
-attributes: _void_
-return value: _List (Customer)_
+attributes: _void_<br>
+return value: _List (Customer)_<br>
 Finding all customers.</li>
-</ul>
+
 
 <li>
 ====Find Customer By Name====
-attributes: _Long_
-return value: _Customer_
+attributes: _Long_<br>
+return value: _Customer_<br>
 Finding the customer by the name.</li>
+</ul>
 
 ==Lease Manager==
 methods: _createLease, updateLease, unLeasedCars, findLeaseByCustomer, lastMonthProfit_
