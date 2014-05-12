@@ -11,6 +11,6 @@ https://rent-car-app.googlecode.com/svn/wiki/Photos/novak.jpg
 ==Task and Position==
 DOM, Java application (Car Rental)
 
-[https://is.muni.cz/auth/osoba/409973 Link to IS]
+[https://is.muni.cz/auth/osoba/409754 Link to IS]
 
 (the picture taken from https://is.muni.cz/)
