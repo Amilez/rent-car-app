@@ -1,5 +1,8 @@
 #summary Information about project.
 
+=Task=
+Create an application which enable administration of leases from Car Rental.
+
 =Information=
 
 This application is a semestral project to PB138 Moderní značkovací jazyky a jejich aplikace. (Faculty of Informatics - Masaryk University)
