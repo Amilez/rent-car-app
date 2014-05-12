@@ -12,3 +12,5 @@ https://rent-car-app.googlecode.com/svn/wiki/Photos/novak.jpg
 Developer
 
 [https://is.muni.cz/auth/osoba/409973 Link to IS]
+
+(picture taken from https://is.muni.cz/)
