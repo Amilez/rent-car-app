@@ -4,7 +4,7 @@
 
 This java application include:<br>
 *entities* : Car, Customer, Lease<br>
-*managers* : CarManager , CustomerManager (Impl), LeaseManager (Impl)<br>
+*managers* : Car Manager , CustomerManager (Impl), LeaseManager (Impl)<br>
 
 
 
