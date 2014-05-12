@@ -13,4 +13,4 @@ Developer
 
 [https://is.muni.cz/auth/osoba/409973 Link to IS]
 
-(picture taken from https://is.muni.cz/)
+(the picture taken from https://is.muni.cz/)
