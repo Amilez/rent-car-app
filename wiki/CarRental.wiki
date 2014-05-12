@@ -1,0 +1,16 @@
+#summary Java application
+
+= Car Renta - Java application =
+
+This java application include:<br>
+*entities* : Car, Customer, Lease
+*managers* : CarManager(Impl), CustomerManager(Impl), LeaseManager(Impl)<br>
+
+
+
+==Car==
+
+Add your content here.  Format your content with:
+  * Text in *bold* or _italic_
+  * Headings, paragraphs, and lists
+  * Automatic links to other wiki pages
