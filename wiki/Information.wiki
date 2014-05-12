@@ -6,7 +6,8 @@ Create an application to enable the administration of leases from Car Rental.
 
 =Information=
 
-This application is a semestral project to PB138 Moderní značkovací jazyky a jejich aplikace. (Faculty of Informatics - Masaryk University)
+This application is a semestral project to PB138 Moderní značkovací jazyky a jejich aplikace. (Faculty of Informatics - Masaryk University). The base of the project is the Car Rental which is a Java application. 
+This java application is used for administrating leases in Car Rental. The application is enabled to create, delete, update leases, cars and customers. It enables also to find one of this entities by various way (id, name, all ...). The application counts the profit from last month.
 
 <br>
 ==Team of developers=
