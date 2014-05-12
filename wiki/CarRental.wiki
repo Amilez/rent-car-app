@@ -39,14 +39,14 @@ return value: _void_
 Deleting the car from the manager.</li>
 
 <li>
-====find Car By Id====
+====Find Car By Id====
 attributes: _Long_
 return value: _Car_
 Finding the car by the Id.</li>
 
 
 <li>
-====find All Cars====
+====Find All Cars====
 attributes: _void_
 return value: _List (Car)_
 Finding all cars.</li>
@@ -54,6 +54,44 @@ Finding all cars.</li>
 
 ==Customer Manager==
 methods: _createCustomer, updateCustomer, deleteCustomer, findCustomerById, findAllCustomers, findCustomerByName_
+<ul>
+<li>
+====Create Customer====
+attributes: _Customer_
+return value: _void_
+Adding the customer into the manager.</li>
+
+<li>
+====Update Customer====
+attributes: _Customer_
+return value: _void_
+Updating the customer in the manager.</li>
+
+<li>
+====Delete Customer====
+attributes: _Customer_
+return value: _void_
+Deleting the customer from the manager.</li>
+
+<li>
+====Find Customer By Id====
+attributes: _Long_
+return value: _Customer_
+Finding the customer by the Id.</li>
+
+
+<li>
+====Find All Customers====
+attributes: _void_
+return value: _List (Customer)_
+Finding all customers.</li>
+</ul>
+
+<li>
+====Find Customer By Name====
+attributes: _Long_
+return value: _Customer_
+Finding the customer by the name.</li>
 
 ==Lease Manager==
 methods: _createLease, updateLease, unLeasedCars, findLeaseByCustomer, lastMonthProfit_
