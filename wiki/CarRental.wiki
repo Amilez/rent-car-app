@@ -9,7 +9,7 @@ This java application include:<br>
 
 
 ==Car==
-attributes: _id (Long), pricePerDay (BigDecimal), numberPlate (String)_
+attributes: _id (Long), pricePerDay (Big Decimal), numberPlate (String)_
 
 ==Customer==
 attributes: _id (Long), phone (String), lastName (String), firstName (String)_
