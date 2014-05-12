@@ -3,14 +3,15 @@
 = Car Renta - Java application =
 
 This java application include:<br>
-*entities* : Car, Customer, Lease<br>
-*managers* : Car Manager(Impl) , Customer Manager (Impl), Lease Manager (Impl)<br>
+*entities*: Car, Customer, Lease<br>
+*managers*: Car Manager (Impl) , Customer Manager (Impl), Lease Manager (Impl)<br>
 
 
 
 ==Car==
+attributes: _id, pricePerDay, numberPlate_
 
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+==Customer==
+attributes: _id, phone, lastName, firstName_
+
+
