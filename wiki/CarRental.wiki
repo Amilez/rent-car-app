@@ -3,8 +3,8 @@
 = Car Renta - Java application =
 
 This java application include:<br>
-*entities* : Car, Customer, Lease
-*managers* : CarManager(Impl), CustomerManager(Impl), LeaseManager(Impl)<br>
+*entities* : Car, Customer, Lease<br>
+*managers* : CarManager (Impl), CustomerManager (Impl), LeaseManager (Impl)<br>
 
 
 
