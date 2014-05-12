@@ -24,32 +24,32 @@ methods: _createCar, updateCar, deleteCar, findCarById, findAllCars_
 ====Create Car====
 attributes: _Car_<br>
 return value: _void_<br>
-Adding the car into the manager.</li>
+Adding the car into the manager.
 
 <li>
 ====Update Car====
 attributes: _Car_<br>
 return value: _void_<br>
-Updating the car in the manager.</li>
+Updating the car in the manager.
 
 <li>
 ====Delete Car====
 attributes: _Car_<br>
 return value: _void_<br>
-Deleting the car from the manager.</li>
+Deleting the car from the manager.
 
 <li>
 ====Find Car By Id====
 attributes: _Long_<br>
 return value: _Car_<br>
-Finding the car by the Id.</li>
+Finding the car by the Id.
 
 
 <li>
 ====Find All Cars====
 attributes: _void_<br>
 return value: _List (Car)_<br>
-Finding all cars.</li>
+Finding all cars.
 </ul>
 
 ==Customer Manager==
