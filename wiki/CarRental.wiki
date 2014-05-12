@@ -23,8 +23,35 @@ methods: _createCar, updateCar, deleteCar, findCarById, findAllCars_
 <li>
 ====Create Car====
 attributes: _Car_
-return value: _void_</li>
+return value: _void_
+Adding the car into the manager.</li>
+
+<li>
+====Update Car====
+attributes: _Car_
+return value: _void_
+Updating the car in the manager.</li>
+
+<li>
+====Delete Car====
+attributes: _Car_
+return value: _void_
+Deleting the car from the manager.</li>
+
+<li>
+====find Car By Id====
+attributes: _Long_
+return value: _Car_
+Finding the car by the Id.</li>
+
+
+<li>
+====find All Cars====
+attributes: _void_
+return value: _List<Car>_
+Finding all cars.</li>
 </ul>
+
 ==Customer Manager==
 methods: _createCustomer, updateCustomer, deleteCustomer, findCustomerById, findAllCustomers, findCustomerByName_
 
