@@ -9,12 +9,10 @@ This java application include:<br>
 
 
 ==Car==
-attributes: _id, pricePerDay, numberPlate_
+attributes: _id (Long), pricePerDay (BigDecimal), numberPlate (String)_
 
 ==Customer==
-attributes: _id, phone, lastName, firstName_
+attributes: _id (Long), phone (String), lastName (String), firstName (String)_
 
 ==Lease==
-attributes: _fromDate, id, toDate, car, realReturn, customer_
-
-
+attributes: _fromDate (Date), id (Long), toDate (Date), car (Car), realReturn (Date), customer (Customer)_
