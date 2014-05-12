@@ -1,7 +1,7 @@
 #summary Information about project.
 
 =Task=
-Create an application which enable administration of leases from Car Rental.
+Create an application to enable the administration of leases from Car Rental.
 <br><br>
 
 =Information=
