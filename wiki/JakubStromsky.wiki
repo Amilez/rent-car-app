@@ -9,7 +9,7 @@ https://rent-car-app.googlecode.com/svn/wiki/Photos/stromsky.jpg
 
 
 ==Task and Position==
-XML scheme, Java application (Car Rental)
+XML Scheme, Java application (Car Rental)
 
 [https://is.muni.cz/auth/osoba/410205 Link to IS]
 
