@@ -1,6 +1,6 @@
 #summary Java application - Documentation
 
-= Car Rental - Java application =
+= Car Rental - Java application - Documentation =
 
 This java application is used for administrating leases in Car Rental. The application is enabled to create, delete, update leases, cars and customers. It enables also to find one of this entities by various way (id, name, all ...). The application counts the profit from last month. 
 
