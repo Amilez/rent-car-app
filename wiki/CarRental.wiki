@@ -48,7 +48,7 @@ Finding the car by the Id.</li>
 <li>
 ====find All Cars====
 attributes: _void_
-return value: _List/<Car/>_
+return value: _List (Car)_
 Finding all cars.</li>
 </ul>
 
