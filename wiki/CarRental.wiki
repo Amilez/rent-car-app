@@ -22,8 +22,8 @@ methods: _createCar, updateCar, deleteCar, findCarById, findAllCars_
 <ul>
 <li>
 ====Create Car====
-attributes: _Car_<br>
-return value: _void_<br>
+attributes: _Car_
+return value: _void_
 Adding the car into the manager.
 </li>
 <li>
