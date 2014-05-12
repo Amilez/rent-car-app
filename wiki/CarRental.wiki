@@ -16,3 +16,6 @@ attributes: _id (Long), phone (String), lastName (String), firstName (String)_
 
 ==Lease==
 attributes: _fromDate (Date), id (Long), toDate (Date), car (Car), realReturn (Date), customer (Customer)_
+
+==Car Manager==
+methods: _createLease, updateLease, unLeasedCars, findLeaseByCustomer, lastMonthProfit_
