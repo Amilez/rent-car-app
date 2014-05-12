@@ -8,7 +8,7 @@ The application includes:<br>
 *entities*: Car, Customer, Lease<br>
 *managers*: Car Manager (Impl) , Customer Manager (Impl), Lease Manager (Impl)<br>
 <br>
-To `Use Case and Class Diagrams` click [https://code.google.com/p/rent-car-app/wiki/CarRentalDiagrams here]
+To *Use Case and Class Diagrams* click [https://code.google.com/p/rent-car-app/wiki/CarRentalDiagrams here]
 
 
 ==Car==
