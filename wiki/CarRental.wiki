@@ -14,4 +14,7 @@ attributes: _id, pricePerDay, numberPlate_
 ==Customer==
 attributes: _id, phone, lastName, firstName_
 
+==Lease==
+attributes: _fromDate, id, toDate, car, realReturn, customer_
+
 
