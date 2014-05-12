@@ -2,6 +2,8 @@
 
 =Jakub Stromský=
 
+https://rent-car-app.googlecode.com/svn/wiki/Photos/stromsky.jpg
+
 ==Contact==
 *Email:* str0m@mail.muni.cz
 
@@ -10,3 +12,5 @@
 Developer
 
 [https://is.muni.cz/auth/osoba/410205 Link to IS]
+
+(picture taken from https://is.muni.cz/)
