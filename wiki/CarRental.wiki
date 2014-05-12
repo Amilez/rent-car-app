@@ -20,6 +20,10 @@ attributes: _fromDate (Date), id (Long), toDate (Date), car (Car), realReturn (D
 ==Car Manager==
 methods: _createCar, updateCar, deleteCar, findCarById, findAllCars_
 
+====Create Car====
+attributes: _Car_
+return value: _void_
+
 ==Customer Manager==
 methods: _createCustomer, updateCustomer, deleteCustomer, findCustomerById, findAllCustomers, findCustomerByName_
 
