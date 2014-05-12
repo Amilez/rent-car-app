@@ -1,4 +1,4 @@
-#summary Class Diagram of Car Rental Java application
+#summary Use Case and Class Diagram of Car Rental Java application
 
 =Use Case Diagram:=
 https://rent-car-app.googlecode.com/svn/wiki/use.jpg
