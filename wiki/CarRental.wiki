@@ -138,7 +138,7 @@ return value: _void_
 Updating the lease in the manager.
 </li>
 <li>
-====UnLeased Cars====
+====Unleased Cars====
 attributes: _void_
 
 return value: _List (Car)_
