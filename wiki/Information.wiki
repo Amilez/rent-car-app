@@ -12,13 +12,13 @@ This java application is used for administrating leases in Car Rental. The appli
 <br>
 ==Team of developers=
 
-[https://code.google.com/p/rent-car-app/wiki/MartinZboril Martin Zbořil] = developer
+[https://code.google.com/p/rent-car-app/wiki/MartinZboril Martin Zbořil] = Administratrion (Google code, Wiki, Google Group), Team leader, XQuery
 
-[https://code.google.com/p/rent-car-app/wiki/JakubStromsky Jakub Stromský] = developer
+[https://code.google.com/p/rent-car-app/wiki/JakubStromsky Jakub Stromský] = XML scheme, Java application (Car rental)
 
-[https://code.google.com/p/rent-car-app/wiki/JanNovak Jan Novák] = developer
+[https://code.google.com/p/rent-car-app/wiki/JanNovak Jan Novák] = XML scheme, Java application (Car rental)
 
-[https://code.google.com/p/rent-car-app/wiki/JanBouska Jan Bouška] = developer
+[https://code.google.com/p/rent-car-app/wiki/JanBouska Jan Bouška] = XSL transformation, Java application (Car rental)
 
 <br>
 ==Supervisors==
