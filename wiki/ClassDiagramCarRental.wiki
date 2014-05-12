@@ -1,0 +1,3 @@
+#summary Class Diagram of Car Rental Java application
+
+https://rent-car-app.googlecode.com/svn/wiki/diagram.jpg
