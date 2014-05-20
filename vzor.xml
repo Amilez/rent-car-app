@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Vsechny atributy aut zakazniku a vypujcek jsou povinne aplikace je vyzaduje pro zadani do databaze
+    vyjimka je realReturn u vypujcky to musi byt NULL pri zadavani zapujcky
+-->
+<carRebtal> //root
+    <cars> //povinne 1vyskyt
+        <car> //nepovinne 0 az nekonecno vyskytu
+            <id>4</id> //long cislo, unikatni
+            <pricePerDay>1200</pricePerDay> //BigDecimal cena
+            <numberPlate>5T9-1045</numberPlate> //String SPZ
+        </car>
+        <car>
+            <id>5</id>
+            <pricePerDay>900</pricePerDay>
+            <numberPlate>5T2-1563</numberPlate>
+        </car>
+    </cars>
+    <customers> //povinny
+        <customer> //nepoviny 1 az nekonecno vyskytu
+            <id>2</id> //long id, unikatni
+            <phone>+420 555 621 123</phone> //!!!STRING!!!
+            <firstName>Tom</firstName>
+            <lastName>Kučavík</lastName>
+        </customer>
+    </customers>
+    <leases>
+        <lease>
+            <id>15</id> //long id, unikatni
+            <car>4</car> //id auta
+            <customer>2</customer> //id zakaznika
+            <from>2014-05-15</from> //from datum
+            <to>2014-05-30</to> //to datum
+            <realReturn></realReturn> //datum skutecneho vraceni, pri vkladani dat NULL
+        </lease>
+    </leases>
+</carRebtal>
