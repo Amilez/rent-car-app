@@ -1,0 +1,11 @@
+Car = pocet aut + prehled aut (id, numberPlate, pricePerDay)
+
+CarMoreDetails =  to same + v jakych pujckach to auto bylo (id pujcek) + zakaznici kteri si ho pujcili (id, jmeno, kolikrat)
+
+Customer =  pocet zakazniku + prehled zakazniku (id, jmeno, cislo, kolirat si pujcili)
+
+CustomerMoreDeatils = to same + pujcky kterych se ucastnili (id) + auta ktera si pujcili (id, spz, kolikrat)
+
+Lease = pocet pujcek + jednotlive pujcky => id pujcky, datum od, datum do, auto (id, spz, cena za den), zakaznik (id, jmeno, telefon) .... >>> proste pujcky se vsema udajema
+
+Average = pocet pujcek, pocet aut, pocet zakazniku, prumer pujcek na auto, prumer pujcek na zakaznika

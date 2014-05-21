@@ -43,7 +43,7 @@
             <customer>3</customer> 
             <from>2014-05-15</from> 
             <to>2014-05-30</to> 
-            <realReturn></realReturn> 
+            <realReturn>2014-05-30</realReturn> 
         </lease>
         <lease>
             <id>16</id> 
@@ -51,7 +51,7 @@
             <customer>2</customer> 
             <from>2014-05-15</from> 
             <to>2014-05-30</to> 
-            <realReturn></realReturn> 
+            <realReturn>2014-05-28</realReturn> 
         </lease>
         <lease>
             <id>1</id> 
@@ -59,7 +59,7 @@
             <customer>3</customer> 
             <from>2014-05-15</from> 
             <to>2014-05-30</to> 
-            <realReturn></realReturn> 
+            <realReturn>2014-05-20</realReturn> 
         </lease>
         <lease>
             <id>2</id> 
@@ -67,7 +67,7 @@
             <customer>3</customer> 
             <from>2014-05-15</from> 
             <to>2014-05-30</to> 
-            <realReturn></realReturn> 
+            <realReturn>2014-05-19</realReturn> 
         </lease>
         <lease>
             <id>5</id> 
@@ -75,7 +75,7 @@
             <customer>2</customer> 
             <from>2014-05-15</from> 
             <to>2014-05-30</to> 
-            <realReturn></realReturn> 
+            <realReturn>2014-06-12</realReturn> 
         </lease>
         <lease>
             <id>6</id> 

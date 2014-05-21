@@ -4,6 +4,7 @@
    <car>
       <id>4</id>
       <numberPlate>5T9-1045</numberPlate>
+      <pricePerDay>1200</pricePerDay>
       <rented_times>2</rented_times>
       <leases>
          <id>15</id>
@@ -21,6 +22,7 @@
    <car>
       <id>5</id>
       <numberPlate>5T2-1563</numberPlate>
+      <pricePerDay>900</pricePerDay>
       <rented_times>5</rented_times>
       <leases>
          <id>16</id>
