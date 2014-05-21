@@ -21,7 +21,7 @@
             <id>2</id> //long id, unikatni
             <phone>+420 555 621 123</phone> //!!!STRING!!!
             <firstName>Tom</firstName>
-            <lastName>Kučavík</lastName>
+            <surname>Kučavík</surname>
         </customer>
     </customers>
     <leases>
