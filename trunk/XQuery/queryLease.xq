@@ -13,6 +13,7 @@
                 <id_lease>{$lease/id/text()}</id_lease> 
                 <date_from>{$lease/from/text()}</date_from> 
                 <date_to>{$lease/to/text()}</date_to> 
+                <date_real_return>{$lease/realReturn/text()}</date_real_return> 
                 <car>
                 <id_car>{$lease/car/text()}</id_car>
                 {$car[id = $lease/car]/numberPlate}

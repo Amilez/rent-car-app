@@ -10,6 +10,7 @@
             <car>
                 {$car/id} 
                 {$car/numberPlate} 
+                {$car/pricePerDay} 
                 {
                 let $id := $car/id                    
                 let $lease := doc("input.xml")/carRental/leases/lease
