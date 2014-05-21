@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customers>
+   <amount_customers>3</amount_customers>
+   <customer>
+      <id>2</id>
+      <firstName>Tom</firstName>
+      <surname>Kučavík</surname>
+      <phone>+420 555 621 123</phone>
+      <rented_times>3</rented_times>
+      <leases>
+         <id>16</id>
+         <id>5</id>
+         <id>6</id>
+      </leases>
+      <cars>
+         <car>
+            <id>5</id>
+            <numberPlate>5T2-1563</numberPlate>
+            <rented_times>3</rented_times>
+         </car>
+      </cars>
+   </customer>
+   <customer>
+      <id>3</id>
+      <firstName>Jarmil</firstName>
+      <surname>Karloslav</surname>
+      <phone>+132 235 23 123</phone>
+      <rented_times>3</rented_times>
+      <leases>
+         <id>15</id>
+         <id>1</id>
+         <id>2</id>
+      </leases>
+      <cars>
+         <car>
+            <id>4</id>
+            <numberPlate>5T9-1045</numberPlate>
+            <rented_times>2</rented_times>
+         </car>
+         <car>
+            <id>5</id>
+            <numberPlate>5T2-1563</numberPlate>
+            <rented_times>1</rented_times>
+         </car>
+      </cars>
+   </customer>
+   <customer>
+      <id>1</id>
+      <firstName>Andrej</firstName>
+      <surname>Olak</surname>
+      <phone>+420 555 621 123</phone>
+      <rented_times>1</rented_times>
+      <leases>
+         <id>9</id>
+      </leases>
+      <cars>
+         <car>
+            <id>5</id>
+            <numberPlate>5T2-1563</numberPlate>
+            <rented_times>1</rented_times>
+         </car>
+      </cars>
+   </customer>
+</customers>
