@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<customers>
+   <amount_customers>3</amount_customers>
+   <customer>
+      <firstName>Tom</firstName>
+      <surname>Kučavík</surname>
+      <phone>+420 555 621 123</phone>
+      <rented_times>3</rented_times>
+   </customer>
+   <customer>
+      <firstName>Jarmil</firstName>
+      <surname>Karloslav</surname>
+      <phone>+132 235 23 123</phone>
+      <rented_times>3</rented_times>
+   </customer>
+   <customer>
+      <firstName>Andrej</firstName>
+      <surname>Olak</surname>
+      <phone>+420 555 621 123</phone>
+      <rented_times>1</rented_times>
+   </customer>
+</customers>
