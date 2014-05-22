@@ -21,17 +21,12 @@ and open the template in the editor.
                 <xsd:element name="car" minOccurs="0" maxOccurs="unbounded">
                     <xsd:complexType>
                         <xsd:sequence>
-                            <xsd:element name="id">
-                                <xsd:simpleType>
-                                    <xsd:restriction base="xsd:long">
-                                        <xsd:minExclusive value="0"/>
-                                    </xsd:restriction>
-                                </xsd:simpleType>
-                            </xsd:element>
+                            <xsd:element name="id" type="xsd:unsignedLong"/>
                             <xsd:element name="numberPlate">
                                 <xsd:simpleType>
                                     <xsd:restriction base="xsd:string">
                                         <xsd:length value="8"/>
+                                        <xsd:pattern value="[0-9A-Z][0-9A-Z][0-9A-Z][-][0-9][0-9][0-9][0-9]"/>
                                     </xsd:restriction>
                                 </xsd:simpleType>
                             </xsd:element>
@@ -42,13 +37,7 @@ and open the template in the editor.
                                     </xsd:restriction>
                                 </xsd:simpleType>
                             </xsd:element>
-                            <xsd:element name="rented_times">
-                                <xsd:simpleType>
-                                    <xsd:restriction base="xsd:integer">
-                                        <xsd:minInclusive value="0"/>
-                                    </xsd:restriction>
-                                </xsd:simpleType>
-                            </xsd:element>
+                            <xsd:element name="rented_times" type="xsd:unsignedInt"/>
                         </xsd:sequence>
                     </xsd:complexType>
                 </xsd:element>
