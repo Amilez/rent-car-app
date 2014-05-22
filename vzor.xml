@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <!--
     Vsechny atributy aut zakazniku a vypujcek jsou povinne aplikace je vyzaduje pro zadani do databaze
     vyjimka je realReturn u vypujcky to musi byt NULL pri zadavani zapujcky
 -->
-<carRebtal> //root
+<carRental> //root
     <cars> //povinne 1vyskyt
         <car> //nepovinne 0 az nekonecno vyskytu
             <id>4</id> //long cislo, unikatni
@@ -34,4 +34,4 @@
             <realReturn></realReturn> //datum skutecneho vraceni, pri vkladani dat NULL
         </lease>
     </leases>
-</carRebtal>
+</carRental>
