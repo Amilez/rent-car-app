@@ -8,6 +8,7 @@
     for $customer in doc("input.xml")/carRental/customers/customer
     return 
             <customer>
+                {$customer/id}
                 {$customer/firstName}
                 {$customer/surname}
                 {$customer/phone}
