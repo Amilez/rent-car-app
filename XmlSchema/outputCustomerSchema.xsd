@@ -16,6 +16,7 @@ and open the template in the editor.
                 <xsd:element name="customer" minOccurs="0" maxOccurs="unbounded">
                     <xsd:complexType>
                         <xsd:sequence>
+                            <xsd:element name="id" type="xsd:unsignedLong"/>
                             <xsd:element name="firstName">
                                 <xsd:simpleType>
                                     <xsd:restriction base="xsd:string">
@@ -46,5 +47,9 @@ and open the template in the editor.
                 </xsd:element>
             </xsd:sequence>
         </xsd:complexType>
+        <xsd:unique name="uniqueID">
+            <xsd:selector xpath="./customer" /> 
+            <xsd:field xpath="./id" /> 
+        </xsd:unique>
     </xsd:element> 
 </xsd:schema>
