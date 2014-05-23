@@ -1,6 +1,4 @@
 <?xml version='1.0' encoding='UTF-8' ?> 
-<!-- was: no XML declaration present -->
-﻿<?xml version="1.0" encoding="UTF-8"?>
 <!--
     Vsechny atributy aut zakazniku a vypujcek jsou povinne aplikace je vyzaduje pro zadani do databaze
     vyjimka je realReturn u vypujcky to musi byt NULL pri zadavani zapujcky
