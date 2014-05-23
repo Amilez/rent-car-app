@@ -1,0 +1,129 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xsd:schema version="1.0"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+    <!-- 2 following elements are referenced from product -->
+    <xsd:element name="carRental">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="cars">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="car" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="id" type="xsd:unsignedLong"/>
+                                        <xsd:element name="pricePerDay">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:decimal">
+                                                    <xsd:minExclusive value="0"/>
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element name="numberPlate">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                    <xsd:length value="8"/>
+                                                    <xsd:pattern value="[0-9A-Z][0-9A-Z][0-9A-Z][-][0-9][0-9][0-9][0-9]"/>
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>                    
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="customers">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="customer" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="id" type="xsd:unsignedLong"/>
+                                        <xsd:element name="phone">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                    <xsd:minLength value="9"/>
+                                                    <xsd:whiteSpace value="preserve"/>
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element name="firstName">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                    <xsd:minLength value="2"/>
+                                                    <xsd:whiteSpace value="collapse"/>
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element name="surname">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                    <xsd:minLength value="2"/>
+                                                    <xsd:whiteSpace value="collapse"/>
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="leases">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="lease">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="id" type="xsd:unsignedLong"/>
+                                        <xsd:element name="car" type="xsd:unsignedLong"/>
+                                        <xsd:element name="customer" type="xsd:unsignedLong"/>
+                                        <xsd:element name="from">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                    <xsd:length value="10"/>
+                                                    <xsd:whiteSpace value="collapse"/> 
+                                                    <xsd:pattern value="[0-9][0-9][0-9][0-9][-][0-9][0-9][-][0-9][0-9]"/>
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element name="to">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                    <xsd:length value="10"/>
+                                                    <xsd:whiteSpace value="collapse"/> 
+                                                    <xsd:pattern value="[0-9][0-9][0-9][0-9][-][0-9][0-9][-][0-9][0-9]"/>
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element name="realReturn"/>                                            
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element> 
+            </xsd:sequence>
+        </xsd:complexType>
+        <xsd:unique name="uniqueCarID">
+            <xsd:selector xpath="./cars/car" /> 
+            <xsd:field xpath="./id" /> 
+        </xsd:unique>
+        <xsd:unique name="uniqueCustomerID">
+            <xsd:selector xpath="./customers/customer" /> 
+            <xsd:field xpath="./id" /> 
+        </xsd:unique>
+        <xsd:unique name="uniqueLeaseID">
+            <xsd:selector xpath="./leases/lease" /> 
+            <xsd:field xpath="./id" /> 
+        </xsd:unique>
+    </xsd:element> 
+</xsd:schema>
