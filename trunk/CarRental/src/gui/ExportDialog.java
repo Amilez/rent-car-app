@@ -8,6 +8,8 @@ package gui;
 
 import dom.Export;
 import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import java.util.concurrent.ExecutionException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -24,12 +26,16 @@ import org.xml.sax.SAXException;
  */
 public class ExportDialog extends javax.swing.JDialog {
 
+    private final ResourceBundle labels;
     /**
      * Creates new form ExportDialog
+     * @param parent
+     * @param modal
      */
     public ExportDialog(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
-        initComponents();
+        labels = ResourceBundle.getBundle("labels", Locale.getDefault());
+        initComponents();        
     }
 
     /**
@@ -50,18 +56,18 @@ public class ExportDialog extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        fileNameLabel.setText("File name:");
+        fileNameLabel.setText(labels.getString("XMLfileNameLabel"));
 
         xmlSuffix.setText(".xml");
 
-        exportButton.setText("Export!");
+        exportButton.setText(labels.getString("XMLexportButton"));
         exportButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exportButtonActionPerformed(evt);
             }
         });
 
-        cancel.setText("Cancel");
+        cancel.setText(labels.getString("cancel"));
         cancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelActionPerformed(evt);
@@ -87,7 +93,7 @@ public class ExportDialog extends javax.swing.JDialog {
                             .addComponent(fileNameField, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(xmlSuffix)
-                .addContainerGap(49, Short.MAX_VALUE))
+                .addContainerGap(32, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -115,7 +121,7 @@ public class ExportDialog extends javax.swing.JDialog {
 
     private void exportButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exportButtonActionPerformed
         if (fileNameField.getText().isEmpty()) {
-            fail.setText("Name can not be empty!");
+            fail.setText(labels.getString("XMLemptyFileName"));
             return;
         }
         if (!fail.getText().isEmpty()) {
@@ -135,7 +141,7 @@ public class ExportDialog extends javax.swing.JDialog {
                     SwingUtilities.invokeAndWait(new Runnable(){
                         @Override
                         public void run(){
-                            fail.setText("Fail!");
+                            fail.setText(labels.getString("fail"));
                         }
                     });
                     return false;
@@ -147,7 +153,7 @@ public class ExportDialog extends javax.swing.JDialog {
                 try {
                     if(get()) {
                         JOptionPane dialog = new JOptionPane();
-                        JOptionPane.showMessageDialog(null, "Successfully exported!", "", JOptionPane.INFORMATION_MESSAGE);
+                        JOptionPane.showMessageDialog(null, labels.getString("XMLsuccessExport"), "", JOptionPane.INFORMATION_MESSAGE);
                         dispose();
                     }
                 } catch (        InterruptedException | ExecutionException ex) {

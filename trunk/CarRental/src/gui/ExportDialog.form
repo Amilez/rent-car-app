@@ -42,7 +42,7 @@
               </Group>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="xmlSuffix" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="49" max="32767" attributes="0"/>
+              <EmptySpace pref="32" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -70,7 +70,9 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="fileNameLabel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="File name:"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="labels.getString(&quot;XMLfileNameLabel&quot;)" type="code"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="fileNameField">
@@ -84,7 +86,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="exportButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Export!"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="labels.getString(&quot;XMLexportButton&quot;)" type="code"/>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="exportButtonActionPerformed"/>
@@ -92,7 +96,9 @@
     </Component>
     <Component class="javax.swing.JButton" name="cancel">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Cancel"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="labels.getString(&quot;cancel&quot;)" type="code"/>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cancelActionPerformed"/>
