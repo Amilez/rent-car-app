@@ -80,7 +80,7 @@ and open the template in the editor.
                 <xsd:element name="leases">
                     <xsd:complexType>
                         <xsd:sequence>
-                            <xsd:element name="lease">
+                            <xsd:element name="lease" minOccurs="0" maxOccurs="unbounded">
                                 <xsd:complexType>
                                     <xsd:sequence>
                                         <xsd:element name="id" type="xsd:unsignedLong"/>
