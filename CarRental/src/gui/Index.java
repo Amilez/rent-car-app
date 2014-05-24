@@ -7,8 +7,6 @@ package gui;
 
 import java.util.Locale;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 import javax.swing.SwingWorker;
@@ -192,9 +190,9 @@ public class Index extends javax.swing.JFrame {
 
         jMenuBar1.add(searchList);
 
-        xml.setText("XML");
+        xml.setText(labels.getString("xml"));
 
-        exportMenuButton.setText("Export");
+        exportMenuButton.setText(labels.getString("export"));
         exportMenuButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 exportMenuButtonActionPerformed(evt);
