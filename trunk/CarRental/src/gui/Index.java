@@ -7,6 +7,8 @@ package gui;
 
 import java.util.Locale;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 import javax.swing.SwingWorker;
@@ -58,6 +60,7 @@ public class Index extends javax.swing.JFrame {
         unleasedCarsPanel = new UnleasedCarsPanel();
         findCustomerPanel = new FindCustomerPanel(this);
         findLeasePanel = new FindLeasePanel(this);
+        
         jScrollPane1.setViewportView(customersPanel);
     }
 
@@ -72,120 +75,134 @@ public class Index extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu4 = new javax.swing.JMenu();
-        jMenuItem10 = new javax.swing.JMenuItem();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem8 = new javax.swing.JMenuItem();
-        jMenuItem9 = new javax.swing.JMenuItem();
+        fileList = new javax.swing.JMenu();
+        exitMenuButton = new javax.swing.JMenuItem();
+        listsList = new javax.swing.JMenu();
+        carsListMenuButton = new javax.swing.JMenuItem();
+        customerListMenuButton = new javax.swing.JMenuItem();
+        leaseListMenuButton = new javax.swing.JMenuItem();
+        unleasedListMenuButton = new javax.swing.JMenuItem();
+        newListMenuButton = new javax.swing.JMenu();
+        newCarMenuButton = new javax.swing.JMenuItem();
+        newCustomerMenuButton = new javax.swing.JMenuItem();
+        newLeaseMenuButton = new javax.swing.JMenuItem();
+        searchList = new javax.swing.JMenu();
+        searchCustomerMenuButton = new javax.swing.JMenuItem();
+        searchLeaseMenuButton = new javax.swing.JMenuItem();
+        xml = new javax.swing.JMenu();
+        exportMenuButton = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle(labels.getString("carRental"));
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        jMenu4.setText(labels.getString("file"));
+        fileList.setText(labels.getString("file"));
 
-        jMenuItem10.setText(labels.getString("exit"));
-        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+        exitMenuButton.setText(labels.getString("exit"));
+        exitMenuButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem10ActionPerformed(evt);
+                exitMenuButtonActionPerformed(evt);
             }
         });
-        jMenu4.add(jMenuItem10);
+        fileList.add(exitMenuButton);
 
-        jMenuBar1.add(jMenu4);
+        jMenuBar1.add(fileList);
 
-        jMenu1.setText(labels.getString("list"));
+        listsList.setText(labels.getString("list"));
 
-        jMenuItem1.setText(labels.getString("cars"));
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        carsListMenuButton.setText(labels.getString("cars"));
+        carsListMenuButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                carsListMenuButtonActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        listsList.add(carsListMenuButton);
 
-        jMenuItem2.setText(labels.getString("customers"));
-        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+        customerListMenuButton.setText(labels.getString("customers"));
+        customerListMenuButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem2ActionPerformed(evt);
+                customerListMenuButtonActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem2);
+        listsList.add(customerListMenuButton);
 
-        jMenuItem3.setText(labels.getString("leases"));
-        jMenuItem3.addActionListener(new java.awt.event.ActionListener() {
+        leaseListMenuButton.setText(labels.getString("leases"));
+        leaseListMenuButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem3ActionPerformed(evt);
+                leaseListMenuButtonActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem3);
+        listsList.add(leaseListMenuButton);
 
-        jMenuItem7.setText(labels.getString("unleasedCars"));
-        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+        unleasedListMenuButton.setText(labels.getString("unleasedCars"));
+        unleasedListMenuButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem7ActionPerformed(evt);
+                unleasedListMenuButtonActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem7);
+        listsList.add(unleasedListMenuButton);
 
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(listsList);
 
-        jMenu2.setText(labels.getString("new"));
+        newListMenuButton.setText(labels.getString("new"));
 
-        jMenuItem4.setText(labels.getString("car"));
-        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+        newCarMenuButton.setText(labels.getString("car"));
+        newCarMenuButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                newCarMenuButtonActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem4);
+        newListMenuButton.add(newCarMenuButton);
 
-        jMenuItem5.setText(labels.getString("customer"));
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+        newCustomerMenuButton.setText(labels.getString("customer"));
+        newCustomerMenuButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
+                newCustomerMenuButtonActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem5);
+        newListMenuButton.add(newCustomerMenuButton);
 
-        jMenuItem6.setText(labels.getString("lease"));
-        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+        newLeaseMenuButton.setText(labels.getString("lease"));
+        newLeaseMenuButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem6ActionPerformed(evt);
+                newLeaseMenuButtonActionPerformed(evt);
             }
         });
-        jMenu2.add(jMenuItem6);
+        newListMenuButton.add(newLeaseMenuButton);
 
-        jMenuBar1.add(jMenu2);
+        jMenuBar1.add(newListMenuButton);
 
-        jMenu3.setText(labels.getString("search"));
+        searchList.setText(labels.getString("search"));
 
-        jMenuItem8.setText(labels.getString("customer"));
-        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+        searchCustomerMenuButton.setText(labels.getString("customer"));
+        searchCustomerMenuButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem8ActionPerformed(evt);
+                searchCustomerMenuButtonActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem8);
+        searchList.add(searchCustomerMenuButton);
 
-        jMenuItem9.setText(labels.getString("lease"));
-        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+        searchLeaseMenuButton.setText(labels.getString("lease"));
+        searchLeaseMenuButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem9ActionPerformed(evt);
+                searchLeaseMenuButtonActionPerformed(evt);
             }
         });
-        jMenu3.add(jMenuItem9);
+        searchList.add(searchLeaseMenuButton);
 
-        jMenuBar1.add(jMenu3);
+        jMenuBar1.add(searchList);
+
+        xml.setText("XML");
+
+        exportMenuButton.setText("Export");
+        exportMenuButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                exportMenuButtonActionPerformed(evt);
+            }
+        });
+        xml.add(exportMenuButton);
+
+        jMenuBar1.add(xml);
 
         setJMenuBar(jMenuBar1);
 
@@ -209,7 +226,7 @@ public class Index extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void carsListMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carsListMenuButtonActionPerformed
         new SwingWorker<Void, Void>(){
             @Override
             protected Void doInBackground() throws Exception {
@@ -222,9 +239,9 @@ public class Index extends javax.swing.JFrame {
                 jScrollPane1.setViewportView(carsManagerPanel);
             } 
         }.execute();
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_carsListMenuButtonActionPerformed
 
-    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+    private void customerListMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_customerListMenuButtonActionPerformed
         new SwingWorker<Void, Void>() {
             @Override
             protected Void doInBackground() throws Exception {
@@ -237,9 +254,9 @@ public class Index extends javax.swing.JFrame {
                 jScrollPane1.setViewportView(customersPanel);
             }
         }.execute();
-    }//GEN-LAST:event_jMenuItem2ActionPerformed
+    }//GEN-LAST:event_customerListMenuButtonActionPerformed
 
-    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+    private void newCarMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newCarMenuButtonActionPerformed
 
         class MyRunnable implements Runnable {
 
@@ -251,6 +268,7 @@ public class Index extends javax.swing.JFrame {
                 this.m = m;
             }
 
+            @Override
             public void run() {
                 AddCarDialog newCustomer = new AddCarDialog(fr, true);
 
@@ -264,9 +282,9 @@ public class Index extends javax.swing.JFrame {
         SwingUtilities.invokeLater(new MyRunnable(this, carsManagerPanel.getTableModel()));
 
 
-    }//GEN-LAST:event_jMenuItem4ActionPerformed
+    }//GEN-LAST:event_newCarMenuButtonActionPerformed
 
-    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+    private void newLeaseMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newLeaseMenuButtonActionPerformed
         class MyRunnable implements Runnable{
             private JFrame fr;
 
@@ -274,14 +292,16 @@ public class Index extends javax.swing.JFrame {
                 this.fr = fr;
             }            
             
+            @Override
             public void run() {
                 new AddLeaseDialog(fr, true).setVisible(true);
+                jScrollPane1.setViewportView(leasesManagerPanel);
             }
         }
         SwingUtilities.invokeLater(new MyRunnable(this));
-    }//GEN-LAST:event_jMenuItem6ActionPerformed
+    }//GEN-LAST:event_newLeaseMenuButtonActionPerformed
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+    private void newCustomerMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newCustomerMenuButtonActionPerformed
 
         class MyRunnable implements Runnable {
 
@@ -293,6 +313,7 @@ public class Index extends javax.swing.JFrame {
                 this.m = m;
             }
 
+            @Override
             public void run() {
                 AddCustomerDialog newCustomer = new AddCustomerDialog(fr, true);
 
@@ -306,9 +327,9 @@ public class Index extends javax.swing.JFrame {
 
         SwingUtilities.invokeLater(new MyRunnable(this, customersPanel.getTableModel()));
 
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
+    }//GEN-LAST:event_newCustomerMenuButtonActionPerformed
 
-    private void jMenuItem3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem3ActionPerformed
+    private void leaseListMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_leaseListMenuButtonActionPerformed
         new SwingWorker<Void, Void>() {
             @Override
             protected Void doInBackground() throws Exception {
@@ -321,25 +342,39 @@ public class Index extends javax.swing.JFrame {
                 jScrollPane1.setViewportView(leasesManagerPanel);
             }
         }.execute();
-    }//GEN-LAST:event_jMenuItem3ActionPerformed
+    }//GEN-LAST:event_leaseListMenuButtonActionPerformed
 
-    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
+    private void searchCustomerMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchCustomerMenuButtonActionPerformed
+        new SwingWorker<Void, Void>() {
+            @Override
+            protected Void doInBackground() throws Exception {
+                ((CustomersTableModel)findCustomerPanel.getjTable2().getModel()).updateQuery();
+                return null;
+            }
+
+            @Override
+            protected void done() {
                 jScrollPane1.setViewportView(findCustomerPanel);
             }
-        });
-    }//GEN-LAST:event_jMenuItem8ActionPerformed
+        }.execute();
+    }//GEN-LAST:event_searchCustomerMenuButtonActionPerformed
 
-    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
-        SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
+    private void searchLeaseMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchLeaseMenuButtonActionPerformed
+        new SwingWorker<Void, Void>() {
+            @Override
+            protected Void doInBackground() throws Exception {
+                ((LeaseTableModel)findLeasePanel.getjTable1().getModel()).updateQuery();
+                return null;
+            }
+
+            @Override
+            protected void done() {
                 jScrollPane1.setViewportView(findLeasePanel);
             }
-        });
-    }//GEN-LAST:event_jMenuItem9ActionPerformed
+        }.execute();
+    }//GEN-LAST:event_searchLeaseMenuButtonActionPerformed
 
-    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+    private void unleasedListMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_unleasedListMenuButtonActionPerformed
         new SwingWorker<Void, Void>() {
             @Override
             protected Void doInBackground() throws Exception {
@@ -352,11 +387,19 @@ public class Index extends javax.swing.JFrame {
                 jScrollPane1.setViewportView(unleasedCarsPanel);
             }
         }.execute();
-    }//GEN-LAST:event_jMenuItem7ActionPerformed
+    }//GEN-LAST:event_unleasedListMenuButtonActionPerformed
 
-    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+    private void exitMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitMenuButtonActionPerformed
         System.exit(0);
-    }//GEN-LAST:event_jMenuItem10ActionPerformed
+    }//GEN-LAST:event_exitMenuButtonActionPerformed
+
+    private void exportMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exportMenuButtonActionPerformed
+        ExportDialog exportDialog = new ExportDialog(this, true);
+        exportDialog.setVisible(true);
+        
+        
+        exportDialog.dispose();
+    }//GEN-LAST:event_exportMenuButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -374,19 +417,15 @@ public class Index extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Index.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Index.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Index.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException |
+                IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Index.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new Index().setVisible(true);
             }
@@ -395,21 +434,23 @@ public class Index extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
-    private javax.swing.JMenu jMenu4;
+    private javax.swing.JMenuItem carsListMenuButton;
+    private javax.swing.JMenuItem customerListMenuButton;
+    private javax.swing.JMenuItem exitMenuButton;
+    private javax.swing.JMenuItem exportMenuButton;
+    private javax.swing.JMenu fileList;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem10;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
-    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JMenuItem leaseListMenuButton;
+    private javax.swing.JMenu listsList;
+    private javax.swing.JMenuItem newCarMenuButton;
+    private javax.swing.JMenuItem newCustomerMenuButton;
+    private javax.swing.JMenuItem newLeaseMenuButton;
+    private javax.swing.JMenu newListMenuButton;
+    private javax.swing.JMenuItem searchCustomerMenuButton;
+    private javax.swing.JMenuItem searchLeaseMenuButton;
+    private javax.swing.JMenu searchList;
+    private javax.swing.JMenuItem unleasedListMenuButton;
+    private javax.swing.JMenu xml;
     // End of variables declaration//GEN-END:variables
 }

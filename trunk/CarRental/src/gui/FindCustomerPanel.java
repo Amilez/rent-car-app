@@ -9,6 +9,7 @@ package gui;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import javax.swing.JFrame;
+import javax.swing.JTable;
 import javax.swing.SwingUtilities;
 import javax.swing.SwingWorker;
 
@@ -27,6 +28,10 @@ public class FindCustomerPanel extends javax.swing.JPanel {
         labels = ResourceBundle.getBundle("labels",locale);
         initComponents();
         this.parent = parent;
+    }
+
+    public JTable getjTable2() {
+        return jTable2;
     }
 
     /**
@@ -73,7 +78,7 @@ public class FindCustomerPanel extends javax.swing.JPanel {
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(30, 30, 30)
                         .addComponent(jButton1)
-                        .addGap(0, 236, Short.MAX_VALUE))
+                        .addGap(0, 279, Short.MAX_VALUE))
                     .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
@@ -86,7 +91,7 @@ public class FindCustomerPanel extends javax.swing.JPanel {
                     .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1))
                 .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 329, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 337, Short.MAX_VALUE)
                 .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
