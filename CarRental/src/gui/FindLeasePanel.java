@@ -9,7 +9,7 @@ package gui;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import javax.swing.JFrame;
-import javax.swing.SwingUtilities;
+import javax.swing.JTable;
 import javax.swing.SwingWorker;
 
 /**
@@ -28,6 +28,10 @@ public class FindLeasePanel extends javax.swing.JPanel {
         labels = ResourceBundle.getBundle("labels",locale);
         initComponents();
         this.parent = parent;
+    }
+
+    public JTable getjTable1() {
+        return jTable1;
     }
 
     /**
