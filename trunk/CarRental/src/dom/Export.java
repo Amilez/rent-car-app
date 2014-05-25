@@ -63,11 +63,11 @@ public class Export {
     }
 
     public void serializeXML(String path) throws TransformerConfigurationException, TransformerException, FileNotFoundException {
-        String folder = new String("./output/");
+        String folder = "./output/";
         File folderPath = new File(folder);
         if (!folderPath.exists()) {
             if (!folderPath.mkdir()) {
-                throw new FileNotFoundException("Can not Create folder");
+                throw new FileNotFoundException("Can not create folder!");
             }
         }
         TransformerFactory factory = TransformerFactory.newInstance();
