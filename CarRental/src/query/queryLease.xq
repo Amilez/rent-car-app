@@ -1,13 +1,13 @@
 <leases>
     {
-    let $leaseL := doc("../../output/output.xml")/carRental/leases/lease
+    let $leaseL := doc("output/output.xml")/carRental/leases/lease
     let $countLease :=  count($leaseL)
     return <amount_leases> {$countLease}</amount_leases>
     
     }{
-    let $car := doc("../../output/output.xml")/carRental/cars/car
-    let $customer := doc("../../output/output.xml")/carRental/customers/customer
-    for $lease in doc("../../output/output.xml")/carRental/leases/lease
+    let $car := doc("output/output.xml")/carRental/cars/car
+    let $customer := doc("output/output.xml")/carRental/customers/customer
+    for $lease in doc("output/output.xml")/carRental/leases/lease
     return 
             <lease>
                 <id_lease>{$lease/id/text()}</id_lease> 
