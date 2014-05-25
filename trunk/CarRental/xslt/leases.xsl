@@ -53,7 +53,7 @@
                     </tr> 
                 </xsl:for-each>
                 </table>
-                
+                <p class="note">for more details, click on the id</p>
                 <xsl:if test="amount_leases">
                     <strong>amount leases:</strong> 
                     <xsl:value-of select="amount_leases"/>
