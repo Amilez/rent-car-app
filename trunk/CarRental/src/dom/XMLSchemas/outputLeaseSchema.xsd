@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xsd:schema version="1.0"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            elementFormDefault="qualified">
+    <!-- 2 following elements are referenced from product -->
+    <xsd:element name="leases">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="amount_leases" type="xsd:unsignedInt"/>
+                <xsd:element name="lease" minOccurs="0" maxOccurs="unbounded">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="id_lease" type="xsd:unsignedLong"/>
+                            <xsd:element name="date_from">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:length value="10"/>
+                                        <xsd:whiteSpace value="collapse"/> 
+                                        <xsd:pattern value="[0-9][0-9][0-9][0-9][-][0-9][0-9][-][0-9][0-9]"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                            <xsd:element name="date_to">
+                                <xsd:simpleType>
+                                    <xsd:restriction base="xsd:string">
+                                        <xsd:length value="10"/>
+                                        <xsd:whiteSpace value="collapse"/> 
+                                        <xsd:pattern value="[0-9][0-9][0-9][0-9][-][0-9][0-9][-][0-9][0-9]"/>
+                                    </xsd:restriction>
+                                </xsd:simpleType>
+                            </xsd:element>
+                            <xsd:element name="date_real_return"/>                                
+                            <xsd:element name="car">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="id_car" type="xsd:unsignedLong"/>
+                                        <xsd:element name="numberPlate">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                    <xsd:length value="8"/>
+                                                    <xsd:pattern value="[0-9A-Z][0-9A-Z][0-9A-Z][-][0-9][0-9][0-9][0-9]"/>
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element name="pricePerDay">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:decimal">
+                                                    <xsd:minExclusive value="0"/>
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                            <xsd:element name="customer">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="id_customer" type="xsd:unsignedLong"/>
+                                        <xsd:element name="firstName">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                    <xsd:minLength value="2"/>
+                                                    <xsd:whiteSpace value="collapse"/>
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element name="surname">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                    <xsd:minLength value="2"/>
+                                                    <xsd:whiteSpace value="collapse"/>
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                        <xsd:element name="phone">
+                                            <xsd:simpleType>
+                                                <xsd:restriction base="xsd:string">
+                                                    <xsd:minLength value="9"/>
+                                                    <xsd:whiteSpace value="preserve"/>
+                                                </xsd:restriction>
+                                            </xsd:simpleType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+        <xsd:unique name="uniqueLeaseID">
+            <xsd:selector xpath="./lease" /> 
+            <xsd:field xpath="./id_lease" /> 
+        </xsd:unique>
+    </xsd:element> 
+</xsd:schema>
