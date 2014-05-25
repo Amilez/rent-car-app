@@ -89,6 +89,7 @@ public class Index extends javax.swing.JFrame {
         searchLeaseMenuButton = new javax.swing.JMenuItem();
         xml = new javax.swing.JMenu();
         exportMenuButton = new javax.swing.JMenuItem();
+        generateMenuButton = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle(labels.getString("carRental"));
@@ -199,6 +200,14 @@ public class Index extends javax.swing.JFrame {
             }
         });
         xml.add(exportMenuButton);
+
+        generateMenuButton.setText("Generate");
+        generateMenuButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                generateMenuButtonActionPerformed(evt);
+            }
+        });
+        xml.add(generateMenuButton);
 
         jMenuBar1.add(xml);
 
@@ -399,6 +408,10 @@ public class Index extends javax.swing.JFrame {
         exportDialog.dispose();
     }//GEN-LAST:event_exportMenuButtonActionPerformed
 
+    private void generateMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generateMenuButtonActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_generateMenuButtonActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -437,6 +450,7 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JMenuItem exitMenuButton;
     private javax.swing.JMenuItem exportMenuButton;
     private javax.swing.JMenu fileList;
+    private javax.swing.JMenuItem generateMenuButton;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JMenuItem leaseListMenuButton;
