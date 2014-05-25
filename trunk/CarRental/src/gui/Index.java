@@ -448,14 +448,13 @@ public class Index extends javax.swing.JFrame {
                         Logger.getLogger(Index.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     
-                    String htmlFilePath = "./output/html/index.html"; // path to your new file
-                    File htmlFile = new File(htmlFilePath);
+                   
+                    File htmlFile = new File("./output/html/index.html");
                     
                     // open the default web browser for the HTML page
                     Desktop.getDesktop().browse(htmlFile.toURI());
                     
-                    // if a web browser is the default HTML handler, this might work too
-                    Desktop.getDesktop().open(htmlFile);
+
                     return null;
                 } catch (IOException ex) {
                     Logger.getLogger(Index.class.getName()).log(Level.SEVERE, null, ex);
