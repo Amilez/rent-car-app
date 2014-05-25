@@ -1,0 +1,21 @@
+
+body, html {
+	margin: 0;
+	padding: 0;
+	color: #000;
+	font-family: arial, tahoma, verdana;
+	background: #fff;
+}
+a, a:hover {
+	color:#2018FF;
+}
+
+
+h2 {
+	color: blue;
+	font-style: italic;
+}
+
+.element{
+	background-color: #dfd; margin: 1em; padding: 0.5em; border: thin dotted;
+	}

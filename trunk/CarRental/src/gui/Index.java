@@ -17,6 +17,7 @@ import javax.swing.SwingWorker;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import org.xml.sax.SAXException;
+import xslTransformation.XSLTProcesor;
 
 /**
  *
@@ -421,12 +422,22 @@ public class Index extends javax.swing.JFrame {
             @Override
             protected Void doInBackground() {  
                 try {
-                    Export export = new Export();
-                    export.exportDBtoXML();
-                    export.serializeXML("output.xml");
-                } catch (ParserConfigurationException | SAXException | IOException | TransformerException ex) {
-                    Logger.getLogger(ExportDialog.class.getName()).log(Level.SEVERE, null, ex);
-                }    
+                    try {
+                        Export export = new Export();
+                        export.exportDBtoXML();
+                        export.serializeXML("output.xml");
+                    } catch (ParserConfigurationException | SAXException | IOException | TransformerException ex) {
+                        Logger.getLogger(ExportDialog.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                    
+                    XSLTProcesor proc = new XSLTProcesor();
+                    proc.transform();
+                    
+                } catch (TransformerException ex) {
+                    Logger.getLogger(Index.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (IOException ex) {
+                    Logger.getLogger(Index.class.getName()).log(Level.SEVERE, null, ex);
+                }
                 return null;
             }
         }.execute();
