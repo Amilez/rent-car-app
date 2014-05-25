@@ -29,12 +29,15 @@ public class XSLTProcesor {
             throws TransformerConfigurationException, TransformerException, IOException {
         
        new File("./output/html").mkdirs();
-       Files.copy(Paths.get("./staticFiles/index.html"), Paths.get("./output/html/index.html"), REPLACE_EXISTING);
+      // Files.copy(Paths.get("./staticFiles/index.html"), Paths.get("./output/html/index.html"), REPLACE_EXISTING);
        Files.copy(Paths.get("./staticFiles/style.css"), Paths.get("./output/html/style.css"), REPLACE_EXISTING);
 
         TransformerFactory tf = TransformerFactory.newInstance();
         
         System.out.println(tf.getClass());
+        
+        Transformer xsltAverage = tf.newTransformer(
+                new StreamSource(new File("./xslt/average.xsl")));
         
         Transformer xsltCars = tf.newTransformer(
                 new StreamSource(new File("./xslt/cars.xsl")));
@@ -60,6 +63,11 @@ public class XSLTProcesor {
         xsltCustomers.transform(
                 new StreamSource(new File("./output/outputCustomer.xml")), 
                 new StreamResult(new File("./output/html/customers.html")));
+        
+        
+        xsltAverage.transform(
+                new StreamSource(new File("./output/outputAverage.xml")), 
+                new StreamResult(new File("./output/html/index.html")));
         
         
         xsltCars.transform(
