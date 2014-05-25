@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="style.css" type="text/css" media="screen"/>
             </head>
             <body>
-                 <h1>customers</h1>
+                 <h1 class="center">customers</h1>
                 
                 <xsl:for-each select="customer">
                      <div class="element">
