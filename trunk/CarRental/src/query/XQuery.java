@@ -19,18 +19,18 @@ import net.sf.saxon.trans.XPathException;
 
 public class XQuery {
 
-    public static void callQuery(String[] args) throws XPathException, IOException {
+    public void  callQuery() throws XPathException, IOException {
 
         Configuration config = new Configuration();
 
         StaticQueryContext staticContext = config.newStaticQueryContext();
 
-        XQueryExpression customer = staticContext.compileQuery(new FileReader("src/query/queryCustomer.xq"));
-        XQueryExpression customerDet = staticContext.compileQuery(new FileReader("src/query/queryCustomerMoreDetails.xq"));
-        XQueryExpression car = staticContext.compileQuery(new FileReader("src/query/queryCar.xq"));
-        XQueryExpression carDet = staticContext.compileQuery(new FileReader("src/query/queryCarMoreDetails.xq"));
-        XQueryExpression average = staticContext.compileQuery(new FileReader("src/query/queryAverage.xq"));
-        XQueryExpression lease = staticContext.compileQuery(new FileReader("src/query/queryLease.xq"));
+        XQueryExpression customer = staticContext.compileQuery(new FileReader("./xQuery/queryCustomer.xq"));
+        XQueryExpression customerDet = staticContext.compileQuery(new FileReader("./xQuery/queryCustomerMoreDetails.xq"));
+        XQueryExpression car = staticContext.compileQuery(new FileReader("./xQuery/queryCar.xq"));
+        XQueryExpression carDet = staticContext.compileQuery(new FileReader("./xQuery/queryCarMoreDetails.xq"));
+        XQueryExpression average = staticContext.compileQuery(new FileReader("./xQuery/queryAverage.xq"));
+        XQueryExpression lease = staticContext.compileQuery(new FileReader("./xQuery/queryLease.xq"));
         
         DynamicQueryContext dynamicContext =
                 new DynamicQueryContext(config);

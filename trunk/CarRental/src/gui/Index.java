@@ -17,6 +17,7 @@ import javax.swing.SwingWorker;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import org.xml.sax.SAXException;
+import query.XQuery;
 import xslTransformation.XSLTProcesor;
 
 /**
@@ -429,6 +430,11 @@ public class Index extends javax.swing.JFrame {
                     } catch (ParserConfigurationException | SAXException | IOException | TransformerException ex) {
                         Logger.getLogger(ExportDialog.class.getName()).log(Level.SEVERE, null, ex);
                     }
+                    
+                   
+                    XQuery xquer = new XQuery();
+                    xquer.callQuery();
+                    
                     
                     XSLTProcesor proc = new XSLTProcesor();
                     proc.transform();
