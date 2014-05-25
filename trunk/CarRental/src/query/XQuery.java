@@ -19,7 +19,7 @@ import net.sf.saxon.trans.XPathException;
 
 public class XQuery {
 
-    public static void main(String[] args) throws XPathException, IOException {
+    public static void callQuery(String[] args) throws XPathException, IOException {
 
         Configuration config = new Configuration();
 
