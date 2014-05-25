@@ -6,6 +6,8 @@
 package gui;
 
 import dom.Export;
+import java.awt.Desktop;
+import java.io.File;
 import java.io.IOException;
 import java.util.Locale;
 import java.util.ResourceBundle;
@@ -424,26 +426,41 @@ public class Index extends javax.swing.JFrame {
             protected Void doInBackground() {  
                 try {
                     try {
-                        Export export = new Export();
-                        export.exportDBtoXML();
-                        export.serializeXML("output.xml");
-                    } catch (ParserConfigurationException | SAXException | IOException | TransformerException ex) {
-                        Logger.getLogger(ExportDialog.class.getName()).log(Level.SEVERE, null, ex);
+                        try {
+                            Export export = new Export();
+                            export.exportDBtoXML();
+                            export.serializeXML("output.xml");
+                        } catch (ParserConfigurationException | SAXException | IOException | TransformerException ex) {
+                            Logger.getLogger(ExportDialog.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                        
+                        
+                        XQuery xquer = new XQuery();
+                        xquer.callQuery();
+                        
+                        
+                        XSLTProcesor proc = new XSLTProcesor();
+                        proc.transform();
+                        
+                    } catch (TransformerException ex) {
+                        Logger.getLogger(Index.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (IOException ex) {
+                        Logger.getLogger(Index.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     
-                   
-                    XQuery xquer = new XQuery();
-                    xquer.callQuery();
+                    String htmlFilePath = "./output/html/index.html"; // path to your new file
+                    File htmlFile = new File(htmlFilePath);
                     
+                    // open the default web browser for the HTML page
+                    Desktop.getDesktop().browse(htmlFile.toURI());
                     
-                    XSLTProcesor proc = new XSLTProcesor();
-                    proc.transform();
-                    
-                } catch (TransformerException ex) {
-                    Logger.getLogger(Index.class.getName()).log(Level.SEVERE, null, ex);
+                    // if a web browser is the default HTML handler, this might work too
+                    Desktop.getDesktop().open(htmlFile);
+                    return null;
                 } catch (IOException ex) {
                     Logger.getLogger(Index.class.getName()).log(Level.SEVERE, null, ex);
                 }
+                
                 return null;
             }
         }.execute();
