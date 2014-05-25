@@ -419,7 +419,7 @@ public class Index extends javax.swing.JFrame {
         new SwingWorker<Void, Void>() {
 
             @Override
-            protected Void doInBackground() throws Exception {  
+            protected Void doInBackground() {  
                 try {
                     Export export = new Export();
                     export.exportDBtoXML();
