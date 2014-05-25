@@ -5,11 +5,18 @@
  */
 package gui;
 
+import dom.Export;
+import java.io.IOException;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 import javax.swing.SwingWorker;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.TransformerException;
+import org.xml.sax.SAXException;
 
 /**
  *
@@ -409,7 +416,20 @@ public class Index extends javax.swing.JFrame {
     }//GEN-LAST:event_exportMenuButtonActionPerformed
 
     private void generateMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generateMenuButtonActionPerformed
-        // TODO add your handling code here:
+        new SwingWorker<Void, Void>() {
+
+            @Override
+            protected Void doInBackground() throws Exception {  
+                try {
+                    Export export = new Export();
+                    export.exportDBtoXML();
+                    export.serializeXML("output.xml");
+                } catch (ParserConfigurationException | SAXException | IOException | TransformerException ex) {
+                    Logger.getLogger(ExportDialog.class.getName()).log(Level.SEVERE, null, ex);
+                }    
+                return null;
+            }
+        }.execute();
     }//GEN-LAST:event_generateMenuButtonActionPerformed
 
     /**
