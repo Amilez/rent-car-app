@@ -449,7 +449,7 @@ public class Index extends javax.swing.JFrame {
                     }
                     
                    
-                    File htmlFile = new File("./output/html/index.html");
+                    File htmlFile = new File("output/html/index.html");
                     
                     // open the default web browser for the HTML page
                     Desktop.getDesktop().browse(htmlFile.toURI());
