@@ -12,6 +12,8 @@ import carrental.Customer;
 import carrental.CustomerManagerImpl;
 import carrental.Lease;
 import carrental.LeaseManagerImpl;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
@@ -60,14 +62,21 @@ public class Export {
         file = new XMLFile();
     }
 
-    public void serializeXML(String path) throws TransformerConfigurationException, TransformerException{
+    public void serializeXML(String path) throws TransformerConfigurationException, TransformerException, FileNotFoundException {
+        String folder = new String("./output/");
+        File folderPath = new File(folder);
+        if (!folderPath.exists()) {
+            if (!folderPath.mkdir()) {
+                throw new FileNotFoundException("Can not Create folder");
+            }
+        }
         TransformerFactory factory = TransformerFactory.newInstance();
         Transformer transformer = factory.newTransformer();
         DOMSource source = new DOMSource(file.getDoc());
-        StreamResult result = new StreamResult(path);
+        StreamResult result = new StreamResult(folder+path);
         transformer.transform(source, result);
     }
-    
+
     public void exportDBtoXML() throws TransformerException{
        
         Document doc = file.getDoc();
