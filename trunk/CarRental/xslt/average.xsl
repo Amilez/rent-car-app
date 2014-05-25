@@ -36,11 +36,7 @@
                 </ul>
                 
                 
-                <amount_cars>1</amount_cars>
-                <amount_customers>1</amount_customers>
-                <amount_leases>0</amount_leases>
-                <average_leases_per_car>0</average_leases_per_car>
-                <average_leases_per_customer>0</average_leases_per_customer>
+               
                 
                 <h2>Statististics</h2>
                 <table cellpadding="3">
