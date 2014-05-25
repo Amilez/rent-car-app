@@ -1,6 +1,8 @@
 
 body, html {
-	margin: 0;
+	width: 400px;
+	margin: auto;
+	margin-top: 20px;
 	padding: 0;
 	color: #000;
 	font-family: arial, tahoma, verdana;
@@ -11,11 +13,21 @@ a, a:hover {
 }
 
 
+.center {
+	text-align: center;
+	}
+
 h2 {
+	
 	color: blue;
 	font-style: italic;
 }
 
 .element{
 	background-color: #dfd; margin: 1em; padding: 0.5em; border: thin dotted;
+	}
+	
+.note{
+	color: red;
+	font-size: 15px;	
 	}

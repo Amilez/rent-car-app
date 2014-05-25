@@ -23,7 +23,7 @@
             </head>
             <body>
                 
-                         <h1>leases</h1>
+                         <h1 class="center">leases</h1>
                 
                 <xsl:for-each select="lease">
                     <div class="element">
