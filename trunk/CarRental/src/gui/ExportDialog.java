@@ -6,7 +6,7 @@
 
 package gui;
 
-import dom.Export;
+import dom.XMLFile;
 import java.io.IOException;
 import java.util.Locale;
 import java.util.ResourceBundle;
@@ -19,6 +19,7 @@ import javax.swing.SwingWorker;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import org.xml.sax.SAXException;
+import static sun.management.ConnectorAddressLink.export;
 
 /**
  *
@@ -132,9 +133,9 @@ public class ExportDialog extends javax.swing.JDialog {
             @Override
             protected Boolean doInBackground() throws Exception {  
                 try {
-                    Export export = new Export();
-                    export.exportDBtoXML();
-                    export.serializeXML(fileNameField.getText() + ".xml");
+                    XMLFile xml = new XMLFile();
+                    xml.exportDBtoXML();
+                    xml.serializeXML(fileNameField.getText() + ".xml");
                     return true;
                 } catch (ParserConfigurationException | SAXException | IOException | TransformerException ex) {
                     Logger.getLogger(ExportDialog.class.getName()).log(Level.SEVERE, null, ex);

@@ -5,7 +5,7 @@
  */
 package gui;
 
-import dom.Export;
+import dom.XMLFile;
 import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
@@ -427,9 +427,9 @@ public class Index extends javax.swing.JFrame {
                 try {
                     try {
                         try {
-                            Export export = new Export();
-                            export.exportDBtoXML();
-                            export.serializeXML("output.xml");
+                            XMLFile xml = new XMLFile();
+                            xml.exportDBtoXML();
+                            xml.serializeXML("output.xml");
                         } catch (ParserConfigurationException | SAXException | IOException | TransformerException ex) {
                             Logger.getLogger(ExportDialog.class.getName()).log(Level.SEVERE, null, ex);
                         }
