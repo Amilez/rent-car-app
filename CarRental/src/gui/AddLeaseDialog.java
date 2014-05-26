@@ -11,6 +11,7 @@ import carrental.CarManagerImpl;
 import carrental.Customer;
 import carrental.CustomerManagerImpl;
 import carrental.Lease;
+import carrental.LeaseManagerImpl;
 import java.io.IOException;
 import java.util.List;
 import java.util.Locale;
@@ -94,6 +95,7 @@ public class AddLeaseDialog extends javax.swing.JDialog {
         jLabel4.setText(labels.getString("to")+":");
 
         CarManagerImpl manager = new CarManagerImpl();
+        LeaseManagerImpl leaseManager = new LeaseManagerImpl();
         BasicDataSource ds = new BasicDataSource();
         Properties db = new Properties();
         try {
@@ -103,8 +105,9 @@ public class AddLeaseDialog extends javax.swing.JDialog {
         }
         ds.setUrl(db.getProperty("jdbc.dbname"));
         manager.setDataSource(ds);
+        leaseManager.setDataSource(ds);
 
-        List<Car> list = manager.findAllCars();
+        List<Car> list = leaseManager.unLeasedCars();
         ComboBoxObject[] cars;
         if(!list.isEmpty()){
             cars = new ComboBoxObject[list.size()];

@@ -7,17 +7,15 @@
 package dom;
 
 
-import carrental.Car;
 import carrental.CarManagerImpl;
-import carrental.Customer;
 import carrental.CustomerManagerImpl;
-import carrental.Lease;
 import carrental.LeaseManagerImpl;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URI;
-import java.util.List;
+import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -35,7 +33,6 @@ import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import org.apache.commons.dbcp.BasicDataSource;
 import org.w3c.dom.Document;
-import org.w3c.dom.Element;
 import org.xml.sax.SAXException;
 
 /**
@@ -50,7 +47,23 @@ public class XMLFile {
     private final CustomerManagerImpl customerManager = new CustomerManagerImpl();
     private final LeaseManagerImpl leaseManager = new LeaseManagerImpl();
 
-    public XMLFile(URI uri, URI schemaUri) throws ParserConfigurationException, SAXException, IOException {
+    public CarManagerImpl getCarManager() {
+        return carManager;
+    }
+
+    public CustomerManagerImpl getCustomerManager() {
+        return customerManager;
+    }
+
+    public LeaseManagerImpl getLeaseManager() {
+        return leaseManager;
+    }
+
+    public Document getDoc() {
+        return doc;
+    }
+
+    public XMLFile(URI uri, URL schemaPath) throws ParserConfigurationException, SAXException, IOException {
         
         BasicDataSource ds = new BasicDataSource();
         Properties property = new Properties();
@@ -66,19 +79,19 @@ public class XMLFile {
         leaseManager.setDataSource(ds);
         
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder = factory.newDocumentBuilder();
-
-        if (schemaUri != null) {
+        factory.setNamespaceAware(true);
+        if (schemaPath != null) {
             SchemaFactory schemaFac = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-            Schema schema = schemaFac.newSchema(new File(schemaUri));
-            factory.setNamespaceAware(true);            
+            Schema schema = schemaFac.newSchema(schemaPath);                  
             factory.setSchema(schema);
         }
+        
+        DocumentBuilder builder = factory.newDocumentBuilder();        
 
         if (uri == null) {
             doc = builder.newDocument();
         } else {
-            doc = builder.parse(uri.toString());
+            doc = builder.parse(new File(uri));
         } 
     }
 
@@ -86,92 +99,7 @@ public class XMLFile {
         this(null, null);
     }
     
-    public void exportDBtoXML() throws TransformerException{
-       
-        
-        Element root = doc.createElement("carRental");
-        doc.appendChild(root);
-        
-        Element cars = doc.createElement("cars");
-        root.appendChild(cars);
-        Element customers = doc.createElement("customers");
-        root.appendChild(customers);
-        Element leases = doc.createElement("leases");
-        root.appendChild(leases);
-        
-        List<Car> carList = carManager.findAllCars();
-        List<Customer> customerList = customerManager.findAllCustomers();
-        List<Lease> leaseList = leaseManager.findLeases();
-        
-        for(int i = 0; i < carList.size(); i++){
-            Car temp = carList.get(i);
-            Element car = doc.createElement("car");
-            Element id = doc.createElement("id");
-            Element pricePerDay = doc.createElement("pricePerDay");
-            Element numberPlate = doc.createElement("numberPlate");
-            
-            id.setTextContent(temp.getId().toString());
-            pricePerDay.setTextContent(temp.getPricePerDay().toString());
-            numberPlate.setTextContent(temp.getNumberPlate());
-            
-            car.appendChild(id);
-            car.appendChild(pricePerDay);
-            car.appendChild(numberPlate);
-            
-            cars.appendChild(car);
-            
-        }
-        for(int i = 0; i < customerList.size(); i++){
-            Customer temp = customerList.get(i);
-            Element customer = doc.createElement("customer");
-            Element id = doc.createElement("id");
-            Element phone = doc.createElement("phone");
-            Element firstName = doc.createElement("firstName");
-            Element surname = doc.createElement("surname");
-            
-            id.setTextContent(temp.getId().toString());
-            phone.setTextContent(temp.getPhone());
-            firstName.setTextContent(temp.getFirstName());
-            surname.setTextContent(temp.getLastName());
-            
-            customer.appendChild(id);
-            customer.appendChild(phone);
-            customer.appendChild(firstName);
-            customer.appendChild(surname);
-            
-            customers.appendChild(customer);
-        }
-        for(int i = 0; i < leaseList.size(); i++){
-            Lease temp = leaseList.get(i);
-            Element lease = doc.createElement("lease");
-            Element id = doc.createElement("id");
-            Element car = doc.createElement("car");
-            Element customer = doc.createElement("customer");
-            Element from = doc.createElement("from");
-            Element to = doc.createElement("to");
-            Element realReturn = doc.createElement("realReturn");
-            
-            id.setTextContent(temp.getId().toString());
-            car.setTextContent(temp.getCar().getId().toString());
-            customer.setTextContent(temp.getCustomer().getId().toString());
-            from.setTextContent(temp.getFromDate().toString());
-            to.setTextContent(temp.getToDate().toString());
-            if(temp.getRealReturn() == null){
-                realReturn.setTextContent("");
-            } else {
-                realReturn.setTextContent(temp.getRealReturn().toString());
-            }
-            
-            lease.appendChild(id);
-            lease.appendChild(car);
-            lease.appendChild(customer);
-            lease.appendChild(from);
-            lease.appendChild(to);
-            lease.appendChild(realReturn);
-            
-            leases.appendChild(lease);
-        }
-    }
+    
     
     public void serializeXML(String path) throws TransformerConfigurationException, TransformerException, FileNotFoundException {
         String folder = "./output/";
