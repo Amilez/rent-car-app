@@ -76,7 +76,7 @@ public class SchemaValidator {
         }
     }
     
-    public Boolean validate(String xmlFilename, String schemaName) throws IOException{
+    public Boolean validate(String xmlFilename) throws IOException{
         
         try {
             Document document = builder.parse(new File(xmlFilename));

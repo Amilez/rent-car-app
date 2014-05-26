@@ -169,12 +169,13 @@ public class LeaseManagerImpl implements LeaseManager {
         try (Connection con = dataSource.getConnection()) {
             try (PreparedStatement st = con.prepareStatement(
                     "SELECT ID FROM CARS WHERE ID NOT IN "
-                    + "(SELECT CAR FROM LEASES WHERE REALRETURN IS NULL AND FROMDATE <= ?)"// find all cars
+                    + "(SELECT CAR FROM LEASES WHERE FROMDATE <= ? AND TODATE >= ?)"// find all cars
             )) {
 
-                java.sql.Date dbDate = new java.sql.Date(java.lang.System.currentTimeMillis());
+                java.sql.Date dbDate = new java.sql.Date(System.currentTimeMillis());
 
                 st.setDate(1, dbDate);
+                st.setDate(2, dbDate);
 
                 try (ResultSet carsId = st.executeQuery()) {
 

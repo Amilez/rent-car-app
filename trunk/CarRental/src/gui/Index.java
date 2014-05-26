@@ -5,17 +5,23 @@
  */
 package gui;
 
+import dom.ExportDBtoXML;
+import dom.ImportXMLtoDB;
 import dom.XMLFile;
 import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
 import java.util.Locale;
 import java.util.ResourceBundle;
+import java.util.concurrent.ExecutionException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import javax.swing.SwingWorker;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 import org.xml.sax.SAXException;
@@ -100,6 +106,7 @@ public class Index extends javax.swing.JFrame {
         searchLeaseMenuButton = new javax.swing.JMenuItem();
         xml = new javax.swing.JMenu();
         exportMenuButton = new javax.swing.JMenuItem();
+        importMenuButton = new javax.swing.JMenuItem();
         generateMenuButton = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -211,6 +218,14 @@ public class Index extends javax.swing.JFrame {
             }
         });
         xml.add(exportMenuButton);
+
+        importMenuButton.setText(labels.getString("import"));
+        importMenuButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                importMenuButtonActionPerformed(evt);
+            }
+        });
+        xml.add(importMenuButton);
 
         generateMenuButton.setText("Generate");
         generateMenuButton.addActionListener(new java.awt.event.ActionListener() {
@@ -414,8 +429,6 @@ public class Index extends javax.swing.JFrame {
     private void exportMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exportMenuButtonActionPerformed
         ExportDialog exportDialog = new ExportDialog(this, true);
         exportDialog.setVisible(true);
-        
-        
         exportDialog.dispose();
     }//GEN-LAST:event_exportMenuButtonActionPerformed
 
@@ -428,7 +441,7 @@ public class Index extends javax.swing.JFrame {
                     try {
                         try {
                             XMLFile xml = new XMLFile();
-                            xml.exportDBtoXML();
+                            new ExportDBtoXML().exportToXML(xml);
                             xml.serializeXML("output.xml");
                         } catch (ParserConfigurationException | SAXException | IOException | TransformerException ex) {
                             Logger.getLogger(ExportDialog.class.getName()).log(Level.SEVERE, null, ex);
@@ -442,9 +455,7 @@ public class Index extends javax.swing.JFrame {
                         XSLTProcesor proc = new XSLTProcesor();
                         proc.transform();
                         
-                    } catch (TransformerException ex) {
-                        Logger.getLogger(Index.class.getName()).log(Level.SEVERE, null, ex);
-                    } catch (IOException ex) {
+                    } catch (            TransformerException | IOException ex) {
                         Logger.getLogger(Index.class.getName()).log(Level.SEVERE, null, ex);
                     }
                     
@@ -464,6 +475,53 @@ public class Index extends javax.swing.JFrame {
             }
         }.execute();
     }//GEN-LAST:event_generateMenuButtonActionPerformed
+
+    private void importMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_importMenuButtonActionPerformed
+        JFileChooser chooser = new JFileChooser();
+        FileNameExtensionFilter filter = new FileNameExtensionFilter(
+                "XML document", "xml");
+        chooser.setFileFilter(filter);
+        int returnVal = chooser.showOpenDialog(this);
+        if (returnVal == JFileChooser.APPROVE_OPTION) {
+            final File selected = chooser.getSelectedFile();
+            
+            new SwingWorker<Boolean, Void>() {
+                
+                @Override
+                protected Boolean doInBackground() throws Exception {
+                    try {
+                        XMLFile xml = new XMLFile(selected.toURI(),
+                                XMLFile.class.getResource("./XMLSchemas/importXMLSchema.xsd"));
+                        new ImportXMLtoDB().importToDB(xml);
+                        return true;
+                    } catch (ParserConfigurationException | SAXException | IOException ex) {
+                        Logger.getLogger(ExportDialog.class.getName()).log(Level.SEVERE, null, ex);
+                        SwingUtilities.invokeAndWait(new Runnable() {
+                            @Override
+                            public void run() {
+                                JOptionPane dialog = new JOptionPane();
+                                JOptionPane.showMessageDialog(null, labels.getString("fail"), "", JOptionPane.ERROR_MESSAGE);
+                            }
+                        });
+                        return false;
+                    }
+                }
+
+                @Override
+                protected void done() {
+                    try {
+                        if (get()) {
+                            JOptionPane dialog = new JOptionPane();
+                            JOptionPane.showMessageDialog(null, labels.getString("XMLsuccessImport"), "", JOptionPane.INFORMATION_MESSAGE);
+                        }
+                    } catch (InterruptedException | ExecutionException ex) {
+                        Logger.getLogger(ExportDialog.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+
+                }
+            }.execute();
+        }
+    }//GEN-LAST:event_importMenuButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -504,6 +562,7 @@ public class Index extends javax.swing.JFrame {
     private javax.swing.JMenuItem exportMenuButton;
     private javax.swing.JMenu fileList;
     private javax.swing.JMenuItem generateMenuButton;
+    private javax.swing.JMenuItem importMenuButton;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JMenuItem leaseListMenuButton;
