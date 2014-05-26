@@ -11,7 +11,7 @@ This java application is used for administrating leases in Car Rental. The appli
 
 <br>
 ==Application=
-Description how the application worsk > [https://code.google.com/p/rent-car-app/wiki/Information?ts=1401119397&updated=Information click here]
+The description how the application works > [https://code.google.com/p/rent-car-app/wiki/Information?ts=1401119397&updated=Information click here]
 
 
 <br>
