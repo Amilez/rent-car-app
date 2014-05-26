@@ -1,9 +1,9 @@
 #summary How the application works.
 
-= Introduction =
+=Application=
+The description of the application is shown here. The screens are included in this page. The data in the application (Number plate, First name, Surname, phone) are completely random. They are taken from nowhere - only maked up for our work. 
 
-Add your content here.
-
+<br><br>
 
 = Details =
 
