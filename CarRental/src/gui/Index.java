@@ -11,6 +11,7 @@ import dom.XMLFile;
 import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Locale;
 import java.util.ResourceBundle;
 import java.util.concurrent.ExecutionException;
@@ -433,19 +434,17 @@ public class Index extends javax.swing.JFrame {
     }//GEN-LAST:event_exportMenuButtonActionPerformed
 
     private void generateMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_generateMenuButtonActionPerformed
-        new SwingWorker<Void, Void>() {
+        new SwingWorker<Boolean, Void>() {
 
             @Override
-            protected Void doInBackground() {  
-                try {
+            protected Boolean doInBackground() {  
+               
                     try {
-                        try {
+                        
                             XMLFile xml = new XMLFile();
                             new ExportDBtoXML().exportToXML(xml);
                             xml.serializeXML("output.xml");
-                        } catch (ParserConfigurationException | SAXException | IOException | TransformerException ex) {
-                            Logger.getLogger(ExportDialog.class.getName()).log(Level.SEVERE, null, ex);
-                        }
+                      
                         
                         
                         XQuery xquer = new XQuery();
@@ -455,24 +454,48 @@ public class Index extends javax.swing.JFrame {
                         XSLTProcesor proc = new XSLTProcesor();
                         proc.transform();
                         
-                    } catch (            TransformerException | IOException ex) {
-                        Logger.getLogger(Index.class.getName()).log(Level.SEVERE, null, ex);
-                    }
-                    
-                   
-                    File htmlFile = new File("output/html/index.html");
+                         File htmlFile = new File("output/html/index.html");
                     
                     // open the default web browser for the HTML page
                     Desktop.getDesktop().browse(htmlFile.toURI());
-                    
-
-                    return null;
-                } catch (IOException ex) {
-                    Logger.getLogger(Index.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                
-                return null;
+                        return true;
+                        
+                    } catch (            TransformerException | IOException | ParserConfigurationException | SAXException ex) {
+                        Logger.getLogger(Index.class.getName()).log(Level.SEVERE, null, ex);
+                        try {
+                            SwingUtilities.invokeAndWait(new Runnable() {
+                                @Override
+                                public void run() {
+                                    JOptionPane dialog = new JOptionPane();
+                                    JOptionPane.showMessageDialog(null, labels.getString("fail"), "", JOptionPane.ERROR_MESSAGE);
+                                }
+                            });
+                        } catch (InterruptedException ex1) {
+                            Logger.getLogger(Index.class.getName()).log(Level.SEVERE, null, ex1);
+                        } catch (InvocationTargetException ex1) {
+                            Logger.getLogger(Index.class.getName()).log(Level.SEVERE, null, ex1);
+                        }
+                        
+                        return false;
+                    }
+              
             }
+            
+            
+            
+             @Override
+                protected void done() {
+                    try {
+                        if (get()) {
+                            JOptionPane dialog = new JOptionPane();
+                            JOptionPane.showMessageDialog(null, labels.getString("successGenerate"), "", JOptionPane.INFORMATION_MESSAGE);
+                        }
+                    } catch (InterruptedException | ExecutionException ex) {
+                        Logger.getLogger(ExportDialog.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+
+                }
+            
         }.execute();
     }//GEN-LAST:event_generateMenuButtonActionPerformed
 
