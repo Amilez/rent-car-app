@@ -454,7 +454,7 @@ public class Index extends javax.swing.JFrame {
                         XSLTProcesor proc = new XSLTProcesor();
                         proc.transform();
                         
-                         File htmlFile = new File("output/html/index.html");
+                         File htmlFile = new File(XSLTProcesor.htmlOut+"index.html");
                     
                     // open the default web browser for the HTML page
                     Desktop.getDesktop().browse(htmlFile.toURI());

@@ -8,6 +8,7 @@ package query;
 
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 import javax.xml.transform.OutputKeys;
 import javax.xml.transform.stream.StreamResult;
@@ -18,19 +19,21 @@ import net.sf.saxon.query.XQueryExpression;
 import net.sf.saxon.trans.XPathException;
 
 public class XQuery {
+    
+    public final static String out = System.getProperty("user.dir")+"/output/";
 
     public void  callQuery() throws XPathException, IOException {
-
+        
         Configuration config = new Configuration();
 
         StaticQueryContext staticContext = config.newStaticQueryContext();
 
-        XQueryExpression customer = staticContext.compileQuery(new FileReader("./xQuery/queryCustomer.xq"));
-        XQueryExpression customerDet = staticContext.compileQuery(new FileReader("./xQuery/queryCustomerMoreDetails.xq"));
-        XQueryExpression car = staticContext.compileQuery(new FileReader("./xQuery/queryCar.xq"));
-        XQueryExpression carDet = staticContext.compileQuery(new FileReader("./xQuery/queryCarMoreDetails.xq"));
-        XQueryExpression average = staticContext.compileQuery(new FileReader("./xQuery/queryAverage.xq"));
-        XQueryExpression lease = staticContext.compileQuery(new FileReader("./xQuery/queryLease.xq"));
+        XQueryExpression customer = staticContext.compileQuery(fileToInputStream("xQuery/queryCustomer.xq"),"UTF-8" );
+        XQueryExpression customerDet = staticContext.compileQuery(fileToInputStream("xQuery/queryCustomerMoreDetails.xq"),"UTF-8");
+        XQueryExpression car = staticContext.compileQuery(fileToInputStream("xQuery/queryCar.xq"),"UTF-8");
+        XQueryExpression carDet = staticContext.compileQuery(fileToInputStream("xQuery/queryCarMoreDetails.xq"),"UTF-8");
+        XQueryExpression average = staticContext.compileQuery(fileToInputStream("xQuery/queryAverage.xq"),"UTF-8");
+        XQueryExpression lease = staticContext.compileQuery(fileToInputStream("xQuery/queryLease.xq"),"UTF-8");
         
         DynamicQueryContext dynamicContext =
                 new DynamicQueryContext(config);
@@ -39,23 +42,32 @@ public class XQuery {
         props.setProperty(OutputKeys.METHOD, "xml");
         props.setProperty(OutputKeys.INDENT, "yes");
 
-        customer.run(dynamicContext, new StreamResult("output/outputCustomer.xml"), props);
+        customer.run(dynamicContext, new StreamResult(out+"outputCustomer.xml"), props);
         customer.run(dynamicContext, new StreamResult(System.out), props);
         
-        customerDet.run(dynamicContext, new StreamResult("output/outputCustomerMoreDetails.xml"), props);
+        customerDet.run(dynamicContext, new StreamResult(out+"outputCustomerMoreDetails.xml"), props);
         customerDet.run(dynamicContext, new StreamResult(System.out), props);
         
-        car.run(dynamicContext, new StreamResult("output/outputCar.xml"), props);
+        car.run(dynamicContext, new StreamResult(out+"outputCar.xml"), props);
         car.run(dynamicContext, new StreamResult(System.out), props);
         
-        carDet.run(dynamicContext, new StreamResult("output/outputCarMoreDetails.xml"), props);
+        carDet.run(dynamicContext, new StreamResult(out+"outputCarMoreDetails.xml"), props);
         carDet.run(dynamicContext, new StreamResult(System.out), props);
         
-        average.run(dynamicContext, new StreamResult("output/outputAverage.xml"), props);
+        average.run(dynamicContext, new StreamResult(out+"outputAverage.xml"), props);
         average.run(dynamicContext, new StreamResult(System.out), props);
         
-        lease.run(dynamicContext, new StreamResult("output/outputLease.xml"), props);
+        lease.run(dynamicContext, new StreamResult(out+"outputLease.xml"), props);
         lease.run(dynamicContext, new StreamResult(System.out), props);
         
+    }
+    
+    
+    private InputStream fileToInputStream(String file)
+    {
+        
+        
+        
+        return this.getClass().getClassLoader().getResourceAsStream(file);
     }
 }
