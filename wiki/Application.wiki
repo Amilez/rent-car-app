@@ -52,6 +52,22 @@ https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/C4.jpg
 
 https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/C5.jpg
 
+==Subpanel Search==
+You can find customers by name or the leases where the customer was participating.<br/>
+
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/S1.jpg
+
+====Customer====
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/S2.jpg
+
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/S3.jpg
+
+====Lease====
+
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/S4.jpg
+
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/S5.jpg
+
 <br/>
 ==Subpanel XML==
 The buttoms in this panel support the work with XML files. 
