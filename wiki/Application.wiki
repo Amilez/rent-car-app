@@ -3,6 +3,7 @@
 =Application=
 The description of the application is shown here. The screens are included in this page. The data in the application (Number plate, First name, Surname, phone) are completely random. They are taken from nowhere - only maked up for our work. 
 
+You need to have a running database named "pb138" to the application be working propertly. 
 <br><br>
 
 = Details =
