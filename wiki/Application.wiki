@@ -7,4 +7,12 @@ You need to have a running database named "pb138" to the application be working 
 <br><br>
 
 =How does it work=
-#Start CarRental.jar
+- Start *CarRental.jar*
+- There are panels at the top of the window: File, List, New, Search, XML
+A
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/A1jpg
+
+==Subpanel *New*==
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/B1jpg
+====Car====
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/B2jpg
