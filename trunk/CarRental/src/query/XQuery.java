@@ -42,22 +42,22 @@ public class XQuery {
         props.setProperty(OutputKeys.METHOD, "xml");
         props.setProperty(OutputKeys.INDENT, "yes");
 
-        customer.run(dynamicContext, new StreamResult(out + "outputCustomer.xml"), props);
+        customer.run(dynamicContext, new StreamResult(new File(out + "outputCustomer.xml")), props);
         customer.run(dynamicContext, new StreamResult(System.out), props);
 
-        customerDet.run(dynamicContext, new StreamResult(out + "outputCustomerMoreDetails.xml"), props);
+        customerDet.run(dynamicContext, new StreamResult(new File(out + "outputCustomerMoreDetails.xml")), props);
         customerDet.run(dynamicContext, new StreamResult(System.out), props);
 
-        car.run(dynamicContext, new StreamResult(out + "outputCar.xml"), props);
+        car.run(dynamicContext, new StreamResult(new File(out + "outputCar.xml")), props);
         car.run(dynamicContext, new StreamResult(System.out), props);
 
-        carDet.run(dynamicContext, new StreamResult(out + "outputCarMoreDetails.xml"), props);
+        carDet.run(dynamicContext, new StreamResult(new File(out + "outputCarMoreDetails.xml")), props);
         carDet.run(dynamicContext, new StreamResult(System.out), props);
 
-        average.run(dynamicContext, new StreamResult(out + "outputAverage.xml"), props);
+        average.run(dynamicContext, new StreamResult(new File(out + "outputAverage.xml")), props);
         average.run(dynamicContext, new StreamResult(System.out), props);
 
-        lease.run(dynamicContext, new StreamResult(out + "outputLease.xml"), props);
+        lease.run(dynamicContext, new StreamResult(new File(out + "outputLease.xml")), props);
         lease.run(dynamicContext, new StreamResult(System.out), props);
 
     }
