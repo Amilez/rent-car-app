@@ -10,7 +10,7 @@ https://rent-car-app.googlecode.com/svn/wiki/Photos/zboril.jpg
 *Email 2:* zboranek@gmail.com
 
 ==Task and Position==
-Administration (Google Code, Wiki, Google Group), Team leader, XQuery
+Team leader, Administration (Google Code, Wiki, Google Group), XQuery
 
 [https://is.muni.cz/auth/osoba/409973 Link to IS]
 
