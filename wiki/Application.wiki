@@ -3,7 +3,7 @@
 =Application=
 The description of the application is shown here. The screens are included in this page. The data in the application (Number plate, First name, Surname, phone) are completely random. They are taken from nowhere - only maked up for our work. 
 
-You need to have a running database named "pb138" to the application be working. 
+You need to have a running database named "pb138" to the application be working. Click [https://code.google.com/p/rent-car-app/wiki/DatabaseScripts?ts=1401184002&updated=DatabaseScripts here] for more information about the tables in the database.
 <br><br>
 
 =How does it work=
