@@ -54,10 +54,11 @@ https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/C5.jpg
 
 <br/>
 ==Subpanel XML==
-The buttoms in this panel support the work with XML files. More description occurs at the specific bottom section. 
+The buttoms in this panel support the work with XML files. 
 <br/>
 
 https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/E.jpg
 
-====Cars====
-Here you can export the data from the database into the XML file (ending .xml). 
+====Export====
+Here you can export the data from the database into the XML file (ending .xml). You are supposed to enter the name of the exported file. The file is saved into the folder Output.
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/E2.jpg
