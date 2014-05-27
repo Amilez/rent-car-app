@@ -7,4 +7,4 @@ You need to have a running database named "pb138" to the application be working 
 <br><br>
 
 =How does it work=
-* Start CarRental.jar
+*   Start CarRental.jar
