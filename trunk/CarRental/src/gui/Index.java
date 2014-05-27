@@ -46,18 +46,23 @@ public class Index extends javax.swing.JFrame {
     public CustomerManagerPanel getCustomersManagerPanel() {
         return customersPanel;
     }
+
     public CarManagerPanel getCarsManagerPanel() {
         return carsManagerPanel;
     }
+
     public LeaseManagerPanel getLeasesManagerPanel() {
         return leasesManagerPanel;
     }
+
     public UnleasedCarsPanel getUnleasedCarsPanel() {
         return unleasedCarsPanel;
     }
+
     public FindCustomerPanel getFindCustomerPanel() {
         return findCustomerPanel;
     }
+
     public FindLeasePanel getFindLeasePanel() {
         return findLeasePanel;
     }
@@ -68,7 +73,7 @@ public class Index extends javax.swing.JFrame {
     public Index() {
 
         Locale locale = Locale.getDefault();
-        labels = ResourceBundle.getBundle("labels",locale);
+        labels = ResourceBundle.getBundle("labels", locale);
         initComponents();
         carsManagerPanel = new CarManagerPanel(this);
         customersPanel = new CustomerManagerPanel(this);
@@ -76,7 +81,7 @@ public class Index extends javax.swing.JFrame {
         unleasedCarsPanel = new UnleasedCarsPanel();
         findCustomerPanel = new FindCustomerPanel(this);
         findLeasePanel = new FindLeasePanel(this);
-        
+
         jScrollPane1.setViewportView(customersPanel);
     }
 
@@ -261,17 +266,17 @@ public class Index extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void carsListMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_carsListMenuButtonActionPerformed
-        new SwingWorker<Void, Void>(){
+        new SwingWorker<Void, Void>() {
             @Override
             protected Void doInBackground() throws Exception {
-                carsManagerPanel.getTableModel().updateQuery();                
+                carsManagerPanel.getTableModel().updateQuery();
                 return null;
             }
-            
+
             @Override
-            protected void done(){
+            protected void done() {
                 jScrollPane1.setViewportView(carsManagerPanel);
-            } 
+            }
         }.execute();
     }//GEN-LAST:event_carsListMenuButtonActionPerformed
 
@@ -319,13 +324,14 @@ public class Index extends javax.swing.JFrame {
     }//GEN-LAST:event_newCarMenuButtonActionPerformed
 
     private void newLeaseMenuButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_newLeaseMenuButtonActionPerformed
-        class MyRunnable implements Runnable{
+        class MyRunnable implements Runnable {
+
             private JFrame fr;
 
             public MyRunnable(JFrame fr) {
                 this.fr = fr;
-            }            
-            
+            }
+
             @Override
             public void run() {
                 new AddLeaseDialog(fr, true).setVisible(true);
@@ -382,7 +388,7 @@ public class Index extends javax.swing.JFrame {
         new SwingWorker<Void, Void>() {
             @Override
             protected Void doInBackground() throws Exception {
-                ((CustomersTableModel)findCustomerPanel.getjTable2().getModel()).updateQuery();
+                ((CustomersTableModel) findCustomerPanel.getjTable2().getModel()).updateQuery();
                 return null;
             }
 
@@ -397,7 +403,7 @@ public class Index extends javax.swing.JFrame {
         new SwingWorker<Void, Void>() {
             @Override
             protected Void doInBackground() throws Exception {
-                ((LeaseTableModel)findLeasePanel.getjTable1().getModel()).updateQuery();
+                ((LeaseTableModel) findLeasePanel.getjTable1().getModel()).updateQuery();
                 return null;
             }
 
@@ -437,65 +443,60 @@ public class Index extends javax.swing.JFrame {
         new SwingWorker<Boolean, Void>() {
 
             @Override
-            protected Boolean doInBackground() {  
-               
-                    try {
-                        
-                            XMLFile xml = new XMLFile();
-                            new ExportDBtoXML().exportToXML(xml);
-                            xml.serializeXML("output.xml");
-                      
-                        
-                        
-                        XQuery xquer = new XQuery();
-                        xquer.callQuery();
-                        
-                        
-                        XSLTProcesor proc = new XSLTProcesor();
-                        proc.transform();
-                        
-                         File htmlFile = new File(XSLTProcesor.htmlOut+"index.html");
-                    
+            protected Boolean doInBackground() {
+
+                try {
+
+                    XMLFile xml = new XMLFile();
+                    new ExportDBtoXML().exportToXML(xml);
+                    xml.serializeXML("output.xml");
+
+                    XQuery xquer = new XQuery();
+                    xquer.callQuery();
+
+                    XSLTProcesor proc = new XSLTProcesor();
+                    proc.transform();
+
+                    File htmlFile = new File(XSLTProcesor.htmlOut + "index.html");
+
                     // open the default web browser for the HTML page
                     Desktop.getDesktop().browse(htmlFile.toURI());
-                        return true;
-                        
-                    } catch (            TransformerException | IOException | ParserConfigurationException | SAXException ex) {
-                        Logger.getLogger(Index.class.getName()).log(Level.SEVERE, null, ex);
-                        try {
-                            SwingUtilities.invokeAndWait(new Runnable() {
-                                @Override
-                                public void run() {
-                                    JOptionPane dialog = new JOptionPane();
-                                    JOptionPane.showMessageDialog(null, labels.getString("fail"), "", JOptionPane.ERROR_MESSAGE);
-                                }
-                            });
-                        } catch (InterruptedException ex1) {
-                            Logger.getLogger(Index.class.getName()).log(Level.SEVERE, null, ex1);
-                        } catch (InvocationTargetException ex1) {
-                            Logger.getLogger(Index.class.getName()).log(Level.SEVERE, null, ex1);
-                        }
-                        
-                        return false;
-                    }
-              
-            }
-            
-            
-            
-             @Override
-                protected void done() {
+                    return true;
+
+                } catch (TransformerException | IOException | ParserConfigurationException | SAXException ex) {
+                    Logger.getLogger(Index.class.getName()).log(Level.SEVERE, null, ex);
                     try {
-                        if (get()) {
-                            JOptionPane dialog = new JOptionPane();
-                            JOptionPane.showMessageDialog(null, labels.getString("successGenerate"), "", JOptionPane.INFORMATION_MESSAGE);
-                        }
-                    } catch (InterruptedException | ExecutionException ex) {
-                        Logger.getLogger(ExportDialog.class.getName()).log(Level.SEVERE, null, ex);
+                        SwingUtilities.invokeAndWait(new Runnable() {
+                            @Override
+                            public void run() {
+                                JOptionPane dialog = new JOptionPane();
+                                JOptionPane.showMessageDialog(null, labels.getString("fail"), "", JOptionPane.ERROR_MESSAGE);
+                            }
+                        });
+                    } catch (InterruptedException ex1) {
+                        Logger.getLogger(Index.class.getName()).log(Level.SEVERE, null, ex1);
+                    } catch (InvocationTargetException ex1) {
+                        Logger.getLogger(Index.class.getName()).log(Level.SEVERE, null, ex1);
                     }
 
+                    return false;
                 }
-            
+
+            }
+
+            @Override
+            protected void done() {
+                try {
+                    if (get()) {
+                        JOptionPane dialog = new JOptionPane();
+                        JOptionPane.showMessageDialog(null, labels.getString("successGenerate"), "", JOptionPane.INFORMATION_MESSAGE);
+                    }
+                } catch (InterruptedException | ExecutionException ex) {
+                    Logger.getLogger(ExportDialog.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
+            }
+
         }.execute();
     }//GEN-LAST:event_generateMenuButtonActionPerformed
 
@@ -507,9 +508,9 @@ public class Index extends javax.swing.JFrame {
         int returnVal = chooser.showOpenDialog(this);
         if (returnVal == JFileChooser.APPROVE_OPTION) {
             final File selected = chooser.getSelectedFile();
-            
+
             new SwingWorker<Boolean, Void>() {
-                
+
                 @Override
                 protected Boolean doInBackground() throws Exception {
                     try {
