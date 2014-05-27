@@ -14,7 +14,8 @@ You need to have a running database named "pb138" to the application be working 
 https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/A1.jpg
 
 ==Subpanel New==
-You can create new car, customer and lease here. When you click on the bottom, there will pop up a window.
+You can create new car, customer and lease here. When you click on the bottom, there will pop up a window.<br/>
+
 https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/B1.jpg
 
 ====Car====
