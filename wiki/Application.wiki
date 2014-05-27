@@ -60,5 +60,26 @@ The buttoms in this panel support the work with XML files.
 https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/E.jpg
 
 ====Export====
-Here you can export the data from the database into the XML file (ending .xml). You are supposed to enter the name of the exported file. The file is saved into the folder Output.
+Here you can export the data from the database into the XML file (ending .xml). You are supposed to enter the name of the exported file. The file is saved into the folder Output.<br/>
+
 https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/E2.jpg
+
+====Import====
+Here you can import the data to the database from the XML file (ending .xml). You are supposed to choose a file from your computer. The file is validated if the form is right. If it is validated, the data are stored into the database. You can look at the bottom of this page where it is shown how the .xml file shloud look like.<br/>
+
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/H2.jpg
+
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/I1.jpg
+
+And here you can see that the data are truly in database.
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/I2.jpg
+
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/I3.jpg
+
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/I4.jpg
+
+
+==XML File==
+This is pattern of the .xml file which is used in Import and Export:
+
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/G.jpg
