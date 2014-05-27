@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<statistics>
-   <amount_cars>2</amount_cars>
-   <amount_customers>3</amount_customers>
-   <amount_leases>7</amount_leases>
-   <average_leases_per_car>3.5</average_leases_per_car>
-   <average_leases_per_customer>2.333333333333333333</average_leases_per_customer>
-</statistics>
