@@ -5,6 +5,7 @@
  */
 package query;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -18,20 +19,21 @@ import net.sf.saxon.trans.XPathException;
 
 public class XQuery {
 
-    public final static String out = System.getProperty("user.dir") + "/output/";
+    public final static String out = System.getProperty("user.dir") + File.separator+"output"+File.separator;
 
     public void callQuery() throws XPathException, IOException {
-String out =  new java.io.File( "." ).getCanonicalPath() + "/output/";
+
+        String xQuery = "xQuery"+File.separator;
         Configuration config = new Configuration();
 
         StaticQueryContext staticContext = config.newStaticQueryContext();
 
-        XQueryExpression customer = staticContext.compileQuery(fileToInputStream("xQuery/queryCustomer.xq"), "UTF-8");
-        XQueryExpression customerDet = staticContext.compileQuery(fileToInputStream("xQuery/queryCustomerMoreDetails.xq"), "UTF-8");
-        XQueryExpression car = staticContext.compileQuery(fileToInputStream("xQuery/queryCar.xq"), "UTF-8");
-        XQueryExpression carDet = staticContext.compileQuery(fileToInputStream("xQuery/queryCarMoreDetails.xq"), "UTF-8");
-        XQueryExpression average = staticContext.compileQuery(fileToInputStream("xQuery/queryAverage.xq"), "UTF-8");
-        XQueryExpression lease = staticContext.compileQuery(fileToInputStream("xQuery/queryLease.xq"), "UTF-8");
+        XQueryExpression customer = staticContext.compileQuery(fileToInputStream(xQuery+"queryCustomer.xq"), "UTF-8");
+        XQueryExpression customerDet = staticContext.compileQuery(fileToInputStream(xQuery+"queryCustomerMoreDetails.xq"), "UTF-8");
+        XQueryExpression car = staticContext.compileQuery(fileToInputStream(xQuery+"queryCar.xq"), "UTF-8");
+        XQueryExpression carDet = staticContext.compileQuery(fileToInputStream(xQuery+"queryCarMoreDetails.xq"), "UTF-8");
+        XQueryExpression average = staticContext.compileQuery(fileToInputStream(xQuery+"queryAverage.xq"), "UTF-8");
+        XQueryExpression lease = staticContext.compileQuery(fileToInputStream(xQuery+"queryLease.xq"), "UTF-8");
 
         DynamicQueryContext dynamicContext
                 = new DynamicQueryContext(config);

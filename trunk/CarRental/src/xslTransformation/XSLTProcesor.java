@@ -26,15 +26,16 @@ import query.XQuery;
  */
 public class XSLTProcesor {
 
-    public static final String htmlOut = XQuery.out + "html/";
+    public static final String htmlOut = XQuery.out + "html"+File.separator;
 
     public void transform()
             throws TransformerConfigurationException, TransformerException, IOException {
         String out = XQuery.out;
-
+        String xslt = "xslt"+File.separator;
+        
         new File(htmlOut).mkdirs();
 
-        copyFile("staticFiles/style.css", htmlOut, "style.css");
+        copyFile("staticFiles"+File.separator+"style.css", htmlOut, "style.css");
 
       // Files.copy(Paths.get("./staticFiles/index.html"), Paths.get("./output/html/index.html"), REPLACE_EXISTING);
         // Files.copy(Paths.get("./staticFiles/style.css"), Paths.get("./output/html/style.css"), REPLACE_EXISTING);
@@ -43,25 +44,25 @@ public class XSLTProcesor {
         System.out.println(tf.getClass());
 
         Transformer xsltAverage = tf.newTransformer(
-                new StreamSource(fileToInputStream("xslt/average.xsl")));
+                new StreamSource(fileToInputStream(xslt+"average.xsl")));
 
         Transformer xsltCars = tf.newTransformer(
-                new StreamSource(fileToInputStream("xslt/cars.xsl")));
+                new StreamSource(fileToInputStream(xslt+"cars.xsl")));
 
         Transformer xsltCustomers = tf.newTransformer(
-                new StreamSource(fileToInputStream("xslt/customers.xsl")));
+                new StreamSource(fileToInputStream(xslt+"customers.xsl")));
 
         Transformer xsltLeases = tf.newTransformer(
-                new StreamSource(fileToInputStream("xslt/leases.xsl")));
+                new StreamSource(fileToInputStream(xslt+"leases.xsl")));
 
         Transformer xsltCarsDetails = tf.newTransformer(
-                new StreamSource(fileToInputStream("xslt/carsDetails.xsl")));
+                new StreamSource(fileToInputStream(xslt+"carsDetails.xsl")));
 
         Transformer xsltCustomerDetails = tf.newTransformer(
-                new StreamSource(fileToInputStream("xslt/customersDetails.xsl")));
+                new StreamSource(fileToInputStream(xslt+"customersDetails.xsl")));
 
         Transformer xsltLeasesDetails = tf.newTransformer(
-                new StreamSource(fileToInputStream("xslt/leasesDetails.xsl")));
+                new StreamSource(fileToInputStream(xslt+"leasesDetails.xsl")));
 
         xsltCustomers.transform(
                 new StreamSource(new File(out + "outputCustomer.xml")),
