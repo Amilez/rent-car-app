@@ -16,6 +16,15 @@ https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/A1.jpg
 ==Subpanel New==
 
 https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/B1.jpg
+
 ====Car====
 
 https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/B2.jpg
+
+====Customer====
+
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/B3.jpg
+
+====Lease====
+
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/B4.jpg
