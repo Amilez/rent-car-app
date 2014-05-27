@@ -3,17 +3,17 @@
 
 Add your content here.
 
-https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/QCar.jpg
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/Query/QCar.jpg
 
-https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/QCarDet.jpg
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/Query/QCarDet.jpg
 
-https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/QCus.jpg
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/Query/QCus.jpg
 
-https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/QCusDet.jpg
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/Query/QCusDet.jpg
 
-https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/QAver.jpg
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/Query/QAver.jpg
 
-https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/QLease.jpg
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/Query/QLease.jpg
 
 
 
