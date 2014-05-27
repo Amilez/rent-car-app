@@ -55,7 +55,7 @@ public class FindCustomerPanel extends javax.swing.JPanel {
         ((CustomersTableModel)jTable2.getModel()).setSearch(jTextField1);
         jScrollPane2.setViewportView(jTable2);
 
-        jLabel2.setText(labels.getString("query")+":"
+        jLabel2.setText(labels.getString("findName")+":"
         );
 
         jButton1.setText(labels.getString("search"));

@@ -51,7 +51,7 @@ public class FindLeasePanel extends javax.swing.JPanel {
 
         setMinimumSize(new java.awt.Dimension(600, 400));
 
-        jLabel1.setText(labels.getString("leasedBy")+":"
+        jLabel1.setText(labels.getString("findName")+":"
         );
 
         jTable1.setModel(new LeaseTableModel(PrintEnum.FIND));
@@ -73,7 +73,7 @@ public class FindLeasePanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 576, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 580, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
