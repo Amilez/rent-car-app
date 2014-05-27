@@ -78,7 +78,10 @@ https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/I3.jpg
 
 https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/I4.jpg
 
+====Generate====
+Here you can generate 6 xml files. Each one generate different information. For more information click [https://code.google.com/p/rent-car-app/wiki/XQuery?ts=1401192338&updated=XQuery here].
 
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/Ge.jpg
 ==XML File==
 This is pattern of the .xml file which is used in Import and Export:
 
