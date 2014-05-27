@@ -85,6 +85,7 @@ Here you can generate 6 xml files. Each one generate different information. For 
 https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/Ge.jpg
 
 The .xml files are stored in the file Output.
+<br/>
 https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/output.jpg
 
 
