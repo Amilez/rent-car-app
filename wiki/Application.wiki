@@ -64,6 +64,8 @@ Here you can export the data from the database into the XML file (ending .xml). 
 
 https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/E2.jpg
 
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/F2.jpg
+
 ====Import====
 Here you can import the data to the database from the XML file (ending .xml). You are supposed to choose a file from your computer. The file is validated if the form is right. If it is validated, the data are stored into the database. You can look at the bottom of this page where it is shown how the .xml file shloud look like.<br/>
 
