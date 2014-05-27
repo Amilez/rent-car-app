@@ -33,4 +33,20 @@ https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/B4.jpg
 ==Subpanel List==
 You can browse all cars, customers and leases here. You have also a possibility to browse cars which are available currently. At the bottom of the tables you can see items which we created in previous step.<br/>
 
-https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/B1.jpg
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/C1.jpg
+
+====Cars====
+
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/C2.jpg
+
+====Customers====
+
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/C3.jpg
+
+====Leases====
+
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/C4.jpg
+
+====Unleased Cars====
+
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/C5.jpg
