@@ -9,10 +9,13 @@ You need to have a running database named "pb138" to the application be working 
 =How does it work=
 - Start *CarRental.jar*
 - There are panels at the top of the window: File, List, New, Search, XML
-A
+<br/>
+
 https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/A1.jpg
 
-==Subpanel *New*==
+==Subpanel New==
+
 https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/B1.jpg
 ====Car====
+
 https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/B2.jpg
