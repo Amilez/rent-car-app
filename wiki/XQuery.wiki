@@ -1,5 +1,5 @@
 #summary XQuery - .xml files form - generated
-= Introduction =
+=XQuery=
 
 Add your content here.
 
