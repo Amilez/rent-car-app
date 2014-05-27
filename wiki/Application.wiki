@@ -30,6 +30,7 @@ https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/B3.jpg
 
 https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/B4.jpg
 
+<br/>
 ==Subpanel List==
 You can browse all cars, customers and leases here. You have also a possibility to browse cars which are available currently. At the bottom of the tables you can see items which we created in previous step.<br/>
 
@@ -50,3 +51,13 @@ https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/C4.jpg
 ====Unleased Cars====
 
 https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/C5.jpg
+
+<br/>
+==Subpanel XML==
+The buttoms in this panel support the work with XML files. More description occurs at the specific bottom section. 
+<br/>
+
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/E.jpg
+
+====Cars====
+Here you can export the data from the database into the XML file (ending .xml). 
