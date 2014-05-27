@@ -6,9 +6,5 @@ The description of the application is shown here. The screens are included in th
 You need to have a running database named "pb138" to the application be working propertly. 
 <br><br>
 
-= Details =
-
-Add your content here.  Format your content with:
-  * Text in *bold* or _italic_
-  * Headings, paragraphs, and lists
-  * Automatic links to other wiki pages
+=How does it work=
+* Start CarRental.jar
