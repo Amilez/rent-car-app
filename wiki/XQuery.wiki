@@ -1,11 +1,21 @@
-#summary One-sentence summary of this page.
-
+#summary XQuery - .xml files form - generated
 = Introduction =
 
 Add your content here.
 
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/QCar.jpg
 
-= Details =
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/QCarDet.jpg
+
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/QCus.jpg
+
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/QCusDet.jpg
+
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/QAver.jpg
+
+https://rent-car-app.googlecode.com/svn/wiki/Photos/Screens/EN/QLease.jpg
+
+
 
 Add your content here.  Format your content with:
   * Text in *bold* or _italic_
