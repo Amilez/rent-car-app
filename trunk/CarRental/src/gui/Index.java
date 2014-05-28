@@ -8,6 +8,7 @@ package gui;
 import dom.ExportDBtoXML;
 import dom.ImportXMLtoDB;
 import dom.XMLFile;
+import dom.XMLSchemas.SchemaValidator;
 import java.awt.Desktop;
 import java.io.File;
 import java.io.IOException;
@@ -514,8 +515,13 @@ public class Index extends javax.swing.JFrame {
                 @Override
                 protected Boolean doInBackground() throws Exception {
                     try {
-                        XMLFile xml = new XMLFile(selected.toURI(),
-                                XMLFile.class.getResource("./XMLSchemas/importXMLSchema.xsd"));
+                        String schema = System.getProperty("user.dir") 
+                                + File.separator +"src"+ File.separator + "dom"
+                                + File.separator +"XMLSchemas" + File.separator + "importXMLSchema.xsd";
+                        if (!new SchemaValidator(schema).validate(selected.toURI())) {
+                            return false;
+                        }
+                        XMLFile xml = new XMLFile(selected.toURI());
                         new ImportXMLtoDB().importToDB(xml);
                         return true;
                     } catch (ParserConfigurationException | SAXException | IOException ex) {
