@@ -244,7 +244,6 @@ public class CarManagerImpl implements CarManager {
         List<Car> tmp = new ArrayList<>();
         Car c = new Car();
         checkDataSource();
-
         try (Connection con = dataSource.getConnection()) {
 
             try (PreparedStatement selectStatement = con.prepareStatement(

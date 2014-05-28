@@ -8,6 +8,7 @@ package dom.XMLSchemas;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URI;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.xml.XMLConstants;
@@ -76,7 +77,7 @@ public class SchemaValidator {
         }
     }
     
-    public Boolean validate(String xmlFilename) throws IOException{
+    public Boolean validate(URI xmlFilename) throws IOException{
         
         try {
             Document document = builder.parse(new File(xmlFilename));

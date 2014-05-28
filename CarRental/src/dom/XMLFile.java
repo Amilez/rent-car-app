@@ -63,7 +63,7 @@ public class XMLFile {
         return doc;
     }
 
-    public XMLFile(URI uri, URL schemaPath) throws ParserConfigurationException, SAXException, IOException {
+    public XMLFile(URI uri) throws ParserConfigurationException, SAXException, IOException {
         
         BasicDataSource ds = new BasicDataSource();
         Properties property = new Properties();
@@ -80,11 +80,6 @@ public class XMLFile {
         
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         factory.setNamespaceAware(true);
-        if (schemaPath != null) {
-            SchemaFactory schemaFac = SchemaFactory.newInstance(XMLConstants.W3C_XML_SCHEMA_NS_URI);
-            Schema schema = schemaFac.newSchema(schemaPath);                  
-            factory.setSchema(schema);
-        }
         
         DocumentBuilder builder = factory.newDocumentBuilder();        
 
@@ -96,7 +91,7 @@ public class XMLFile {
     }
 
     public XMLFile() throws ParserConfigurationException, SAXException, IOException {
-        this(null, null);
+        this(null);
     }
     
     
