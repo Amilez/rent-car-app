@@ -16,7 +16,7 @@ XSL Transformation, Java application (Car Rental)
 [https://drive.google.com/file/d/0BzXfFJg8C8-WaEpfbmhsNlVGSFU/edit?usp=sharing Click here]
 
 
-
+<br/><br/>
 [https://is.muni.cz/auth/osoba/409846 Link to IS]
 
 (the picture taken from https://is.muni.cz/)
