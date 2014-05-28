@@ -11,6 +11,12 @@ https://rent-car-app.googlecode.com/svn/wiki/Photos/stromsky.jpg
 ==Task and Position==
 XML Scheme, Java application (Car Rental)
 
+==Report of his work on the project==
+
+[https://drive.google.com/file/d/0BzXfFJg8C8-Wa1JyU2NPZGtsWk0/edit?usp=sharing Click here]
+
+
+<br/><br/>
 [https://is.muni.cz/auth/osoba/410205 Link to IS]
 
 (the picture taken from https://is.muni.cz/)
