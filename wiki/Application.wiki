@@ -6,6 +6,10 @@ The description of the application is shown here. The screens are included in th
 You need to have a running database named "pb138" to the application be working. Click [https://code.google.com/p/rent-car-app/wiki/DatabaseScripts?ts=1401184002&updated=DatabaseScripts here] for more information about the tables in the database.
 <br><br>
 
+=JavaDoc=
+- Click [http://www.fi.muni.cz/~xnovak20/CarRental/ here]
+
+
 =How does it work=
 - Start *CarRental.jar*
 - There are panels at the top of the window: File, List, New, Search, XML
