@@ -7,7 +7,7 @@ You need to have a running database named "pb138" to the application be working.
 <br><br>
 
 =JavaDoc=
-- Click [http://www.fi.muni.cz/~xnovak20/CarRental here]
+- Click 
 
 
 =How does it work=
